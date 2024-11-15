@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 
 
 
-// author
+// author vinayak
 @Entity
 @Table(name = "Patient")
 public class Patient {
