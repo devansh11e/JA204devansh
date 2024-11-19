@@ -42,16 +42,18 @@ public class AppointmentServiceImpl implements IAppointmentService{
 
 	    @Override
 	    public int cancelAppointment(int appointmentId) {
+	        // Fetch the appointment by ID
 	        Appointment appointment = appointmentRepo.findById(appointmentId)
 	                .orElseThrow(() -> new PatientNotFoundException("Appointment not found with id: " + appointmentId));
-	        appointmentRepo.delete(appointment);
-	        return 1; // Success
+
+	        // Update the status to "Cancelled"
+	        appointment.setStatus("Cancelled");
+
+	        // Save the updated appointment
+	        appointmentRepo.save(appointment);
+
+	        return 1; // Indicate success
 	    }
 
-	    //@Override
-	    //public List<Appointment> viewAppointmentsByDate(String date) {
-	      //  List<Appointment> ap=appointmentRepo.findByappointmentDate(date);
-	        //return ap;
-	    //}
-
+	    
 }
