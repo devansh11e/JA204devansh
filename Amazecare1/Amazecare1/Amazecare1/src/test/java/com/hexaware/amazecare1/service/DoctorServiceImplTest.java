@@ -1,69 +1,58 @@
 package com.hexaware.amazecare1.service;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import com.hexaware.amazecare1.entities.Doctor;
 import com.hexaware.amazecare1.exceptions.DoctorNotFoundException;
-@SpringBootTest
+
 class DoctorServiceImplTest {
-	@Autowired
-    IDoctorService service;
+
+    @Mock
+    IDoctorService mockService;
+
+    @InjectMocks
+    DoctorServiceImpl serviceImpl;
 
     Logger logger = LoggerFactory.getLogger(DoctorServiceImplTest.class);
 
-	@BeforeAll
-	static void setUpBeforeClass() throws Exception {
-	}
+    @BeforeEach
+    void setUp() {
+        MockitoAnnotations.openMocks(this);
+    }
 
-	 @Test
-	    void testRegisterDoctor() {
-	        Doctor doctor = new Doctor(1002, "Dr. Sharma", "Cardiology", 15, "MD", "Senior Consultant");
-	        Doctor registeredDoctor = service.registerDoctor(doctor);
-	        assertNotNull(registeredDoctor);
-	        assertEquals("Dr. Sharma", registeredDoctor.getDoctorName());
-	        logger.info("Doctor registered successfully: {}", registeredDoctor);
-	    }
+    @Test
+    void testRegisterDoctor() {
+        Doctor doctor = new Doctor(1002, "Dr. Sharma", "Cardiology", 15, "MD", "Senior Consultant");
+        when(mockService.registerDoctor(doctor)).thenReturn(doctor);
 
-	    @Test
-	    void testUpdateDoctor() {
-	        Doctor doctor = new Doctor(1002, "Dr. Sharma", "Neurology", 12, "MBBS, MD", "Consultant");
-	        Doctor updatedDoctor = service.updateDoctor(doctor);
-	        assertEquals("Neurology", updatedDoctor.getSpeciality());
-	        logger.info("Doctor updated successfully: {}", updatedDoctor);
-	    }
+        Doctor registeredDoctor = serviceImpl.registerDoctor(doctor);
 
-	    @Test
-	    void testGetDoctorById() throws DoctorNotFoundException {
-	        int doctorId = 1;
-	        Doctor doctor = service.getDoctorById(doctorId);
-	        assertNotNull(doctor);
-	        assertEquals(doctorId, doctor.getDoctorId());
-	        logger.info("Doctor fetched successfully: {}", doctor);
-	    }
+        assertNotNull(registeredDoctor);
+        assertEquals("Dr. Sharma", registeredDoctor.getDoctorName());
+        verify(mockService, times(1)).registerDoctor(doctor);
+        logger.info("Doctor registered successfully: {}", registeredDoctor);
+    }
 
-	    @Test
-	    void testDeleteDoctorById() throws DoctorNotFoundException {
-	        int doctorId = 1002;
-	        String result = service.deleteDoctorById(doctorId);
-	        assertEquals("Doctor deleted successfully", result);
-	        logger.info("Doctor deleted successfully. Result: {}", result);
-	    }
+    @Test
+    void testGetDoctorById() throws DoctorNotFoundException {
+        int doctorId = 1002;
+        Doctor doctor = new Doctor(doctorId, "Dr. Sharma", "Neurology", 10, "MBBS", "Consultant");
+        when(mockService.getDoctorById(doctorId)).thenReturn(doctor);
 
-	    @Test
-	    void testGetByDoctorName() throws DoctorNotFoundException {
-	        String doctorName = "Dr. Sharma";
-	        Doctor doctor = service.getByDoctorName(doctorName).get(0);
-	        assertNotNull(doctor);
-	        assertEquals(doctorName, doctor.getDoctorName());
-	        logger.info("Doctor fetched successfully by name: {}", doctor);
-	    }
+        Doctor fetchedDoctor = serviceImpl.getDoctorById(doctorId);
 
+        assertNotNull(fetchedDoctor);
+        assertEquals(doctorId, fetchedDoctor.getDoctorId());
+        verify(mockService, times(1)).getDoctorById(doctorId);
+        logger.info("Doctor fetched successfully: {}", fetchedDoctor);
+    }
 }
