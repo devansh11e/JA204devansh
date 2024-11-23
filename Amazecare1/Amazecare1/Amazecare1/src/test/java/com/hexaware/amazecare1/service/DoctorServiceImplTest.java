@@ -31,7 +31,7 @@ class DoctorServiceImplTest {
 
     @Test
     void testRegisterDoctor() {
-        Doctor doctor = new Doctor(1002, "Dr. Sharma", "Cardiology", 15, "MD", "Senior Consultant");
+        Doctor doctor = new Doctor(1002, "Dr. Sharma", "Cardiology", 15, "MD", "Senior Consultant","Available");
         when(mockService.registerDoctor(doctor)).thenReturn(doctor);
 
         Doctor registeredDoctor = serviceImpl.registerDoctor(doctor);
@@ -45,7 +45,7 @@ class DoctorServiceImplTest {
     @Test
     void testGetDoctorById() throws DoctorNotFoundException {
         int doctorId = 1002;
-        Doctor doctor = new Doctor(doctorId, "Dr. Sharma", "Neurology", 10, "MBBS", "Consultant");
+        Doctor doctor = new Doctor(doctorId, "Dr. Sharma", "Neurology", 10, "MBBS", "Consultant","Available");
         when(mockService.getDoctorById(doctorId)).thenReturn(doctor);
 
         Doctor fetchedDoctor = serviceImpl.getDoctorById(doctorId);

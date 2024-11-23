@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hexaware.amazecare1.entities.MedicalRecord;
 import com.hexaware.amazecare1.exceptions.AppointmentNotFoundException;
 import com.hexaware.amazecare1.exceptions.MedicalRecordNotFoundException;
-
 import com.hexaware.amazecare1.service.IMedicalRecordService;
 
 import jakarta.validation.Valid;
@@ -24,6 +24,7 @@ import jakarta.validation.Valid;
 @RequestMapping("/api/medicalrecords")
 public class MedicalRecordRestController {
 	
+	@Autowired
 	IMedicalRecordService service;
 	Logger logger =	   LoggerFactory.getLogger(MedicalRecordRestController.class);
 

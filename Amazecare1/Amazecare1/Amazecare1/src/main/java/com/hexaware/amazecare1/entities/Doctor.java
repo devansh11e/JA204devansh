@@ -31,12 +31,19 @@ public class Doctor {
   private String qualification;
   @Size(min=0,max=20,message=" Designation must be within desired limits")
   private String designation;
+  @Size(min=0,max=20,message=" Avalilability must be within desired limits")
+  private String availability;
   
   public Doctor()
   {super();}
 
-public Doctor(int doctorId, String doctorName, String speciality, int experience, String qualification,
-		String designation) {
+public Doctor(int doctorId,
+		@Size(min = 0, max = 20, message = " Doctor name must be within desired limits") String doctorName,
+		@Size(min = 0, max = 20, message = " Specialtity must be within desired limits") String speciality,
+		@Min(1) @Max(15) int experience,
+		@Size(min = 0, max = 20, message = " Qualification must be within desired limits") String qualification,
+		@Size(min = 0, max = 20, message = " Designation must be within desired limits") String designation,
+		@Size(min = 0, max = 20, message = " Avalilability must be within desired limits") String availability) {
 	super();
 	this.doctorId = doctorId;
 	this.doctorName = doctorName;
@@ -44,6 +51,7 @@ public Doctor(int doctorId, String doctorName, String speciality, int experience
 	this.experience = experience;
 	this.qualification = qualification;
 	this.designation = designation;
+	this.availability = availability;
 }
 
 public int getDoctorId() {
@@ -94,11 +102,22 @@ public void setDesignation(String designation) {
 	this.designation = designation;
 }
 
+public String getAvailability() {
+	return availability;
+}
+
+public void setAvailability(String availability) {
+	this.availability = availability;
+}
+
 @Override
 public String toString() {
 	return "Doctor [doctorId=" + doctorId + ", doctorName=" + doctorName + ", speciality=" + speciality
-			+ ", experience=" + experience + ", qualification=" + qualification + ", designation=" + designation + "]";
+			+ ", experience=" + experience + ", qualification=" + qualification + ", designation=" + designation
+			+ ", availability=" + availability + "]";
 }
-  
+
+
+
 }
 
