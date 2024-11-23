@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.hexaware.amazecare1.entities.Appointment;
 import com.hexaware.amazecare1.entities.Patient;
+import com.hexaware.amazecare1.exceptions.AppointmentNotFoundException;
 import com.hexaware.amazecare1.exceptions.PatientNotFoundException;
 import com.hexaware.amazecare1.repositories.AppointmentRepository;
 import com.hexaware.amazecare1.repositories.PatientRepository;
@@ -28,23 +29,34 @@ public class AppointmentServiceImpl implements IAppointmentService{
 	 Logger logger =LoggerFactory.getLogger(AppointmentServiceImpl.class);
 	 
 	 @Override
-	    public Appointment scheduleAppointment(int patientId, Appointment appointment) {
+	    public Appointment scheduleAppointment(int patientId, Appointment appointment) throws PatientNotFoundException{
 	        Patient patient = patientRepo.findById(patientId)
 	                .orElseThrow(() -> new PatientNotFoundException("Patient not found with id: " + patientId));
 	        appointment.setPatient(patient);
 	        return appointmentRepo.save(appointment);
 	    }
 
-	    @Override
-	    public List<Appointment> findByAppointmentId(int appointmentId) {
-	        return appointmentRepo.findByAppointmentId(appointmentId);
-	    }
+	 @Override
+	 public List<Appointment> findByAppointmentId(int appointmentId) throws AppointmentNotFoundException {
+	     List<Appointment> appointments = appointmentRepo.findByAppointmentId(appointmentId);
+	     try {
+	     if (appointments.isEmpty()) {
+	         throw new AppointmentNotFoundException("No appointments found with ID: " + appointmentId);
+	     }
+	     return appointments;
+	     }
+	     catch (AppointmentNotFoundException ex) {
+	         // Log the exception message and rethrow the exception
+	         System.err.println(ex.getMessage());
+	         throw ex;
+	     }
+	 }
 
 	    @Override
-	    public int cancelAppointment(int appointmentId) {
+	    public int cancelAppointment(int appointmentId) throws AppointmentNotFoundException {
 	        // Fetch the appointment by ID
 	        Appointment appointment = appointmentRepo.findById(appointmentId)
-	                .orElseThrow(() -> new PatientNotFoundException("Appointment not found with id: " + appointmentId));
+	                .orElseThrow(() -> new AppointmentNotFoundException("Appointment not found with id: " + appointmentId));
 
 	        // Update the status to "Cancelled"
 	        appointment.setStatus("Cancelled");

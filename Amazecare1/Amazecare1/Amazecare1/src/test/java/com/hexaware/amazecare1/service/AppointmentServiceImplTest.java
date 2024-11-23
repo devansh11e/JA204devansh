@@ -16,6 +16,7 @@ import org.slf4j.LoggerFactory;
 import com.hexaware.amazecare1.entities.Appointment;
 import com.hexaware.amazecare1.entities.Doctor;
 import com.hexaware.amazecare1.entities.Patient;
+import com.hexaware.amazecare1.exceptions.AppointmentNotFoundException;
 
 class AppointmentServiceImplTest {
 
@@ -35,7 +36,7 @@ class AppointmentServiceImplTest {
     @Test
     void testScheduleAppointment() {
         Patient patient = new Patient(102, "Vinayak Soni", "04/07/2001", "Male", 7748049010.0, "Anxiety", "General", "07/11/2024");
-        Doctor doctor = new Doctor(1002, "Dr. Sharma", "Neurology", 10, "MBBS", "Consultant");
+        Doctor doctor = new Doctor(1002, "Dr. Sharma", "Neurology", 10, "MBBS", "Consultant","Available");
         Appointment appointment = new Appointment(1, patient, doctor, new Date(System.currentTimeMillis() + 86400000), "10:00 AM", "Scheduled", "Regular Checkup");
 
         when(mockService.scheduleAppointment(1, appointment)).thenReturn(appointment);
@@ -49,7 +50,7 @@ class AppointmentServiceImplTest {
     }
 
     @Test
-    void testCancelAppointment() {
+    void testCancelAppointment() throws AppointmentNotFoundException {
         int appointmentId = 101;
         when(mockService.cancelAppointment(appointmentId)).thenReturn(1);
 

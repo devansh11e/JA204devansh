@@ -1,28 +1,602 @@
-[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 7952 (C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by devan in C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
+[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 8240 (C:\Users\ASUS\OneDrive\Desktop\Amazecare case study\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by ASUS in C:\Users\ASUS\OneDrive\Desktop\Amazecare case study\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
 [INFO]  :  No active profile set, falling back to 1 default profile: "default"
 [INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO]  :  Finished Spring Data repository scanning in 73 ms. Found 5 JPA repository interfaces.
+[INFO]  :  Finished Spring Data repository scanning in 176 ms. Found 5 JPA repository interfaces.
 [INFO]  :  Tomcat initialized with port(s): 8081 (http)
 [INFO]  :  Starting service [Tomcat]
 [INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
 [INFO]  :  Initializing Spring embedded WebApplicationContext
-[INFO]  :  Root WebApplicationContext: initialization completed in 1803 ms
+[INFO]  :  Root WebApplicationContext: initialization completed in 4308 ms
 [INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
 [INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
 [INFO]  :  HHH000406: Using bytecode reflection optimizer
 [INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
 [INFO]  :  HikariPool-1 - Starting...
-[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c31e410
+[ERROR]  :  HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:437)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:279)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:193)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:69)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:264)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:239)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:231)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:199)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:169)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1383)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1815)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1764)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:596)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1165)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:939)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.hexaware.amazecare1.AmazecareApplication.main(AmazecareApplication.java:10)
+[WARN]  :  HHH000342: Could not obtain connection to query metadata
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:279)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:193)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:69)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:264)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:239)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:231)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:199)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:169)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1383)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1815)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1764)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:596)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1165)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:939)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.hexaware.amazecare1.AmazecareApplication.main(AmazecareApplication.java:10)
+[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO]  :  HikariPool-1 - Starting...
+[ERROR]  :  HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:437)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:293)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1458)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1815)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1764)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:596)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1165)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:939)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.hexaware.amazecare1.AmazecareApplication.main(AmazecareApplication.java:10)
+[WARN]  :  SQL Error: 1045, SQLState: 28000
+[ERROR]  :  Access denied for user 'root'@'localhost' (using password: YES)
+[ERROR]  :  Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+[WARN]  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+[INFO]  :  Stopping service [Tomcat]
+[INFO]  :  
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[ERROR]  :  Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1768)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:596)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1165)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:939)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at com.hexaware.amazecare1.AmazecareApplication.main(AmazecareApplication.java:10)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1815)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1764)
+	... 16 common frames omitted
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:61)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:293)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1458)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:437)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 41 common frames omitted
+[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 11636 (C:\Users\ASUS\OneDrive\Desktop\Amazecare case study\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by ASUS in C:\Users\ASUS\OneDrive\Desktop\Amazecare case study\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
+[INFO]  :  No active profile set, falling back to 1 default profile: "default"
+[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]  :  Finished Spring Data repository scanning in 133 ms. Found 5 JPA repository interfaces.
+[INFO]  :  Tomcat initialized with port(s): 8081 (http)
+[INFO]  :  Starting service [Tomcat]
+[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
+[INFO]  :  Initializing Spring embedded WebApplicationContext
+[INFO]  :  Root WebApplicationContext: initialization completed in 3210 ms
+[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
+[INFO]  :  HHH000406: Using bytecode reflection optimizer
+[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO]  :  HikariPool-1 - Starting...
+[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7bdb4f17
 [INFO]  :  HikariPool-1 - Start completed.
 [WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
 [WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
 [INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 [INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.DoctorRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.PatientRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.AppointmentRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.MedicalRecordRepository
 [WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 [INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
-[INFO]  :  Started AmazecareApplication in 5.897 seconds (process running for 6.854)
+[INFO]  :  Started AmazecareApplication in 11.366 seconds (process running for 12.975)
+[INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]  :  Initializing Servlet 'dispatcherServlet'
+[INFO]  :  Completed initialization in 15 ms
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.PatientRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.MedicalRecordRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.DoctorRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.PrescribeMedicationRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.AppointmentRestController
+[INFO]  :  Init duration for springdoc-openapi is: 3158 ms
 [INFO]  :  Application shutdown requested.
 [INFO]  :  Stopping service [Tomcat]
+[INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
+[INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO]  :  HikariPool-1 - Shutdown initiated...
+[INFO]  :  HikariPool-1 - Shutdown completed.
+[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 13176 (C:\Users\ASUS\OneDrive\Desktop\Amazecare case study\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by ASUS in C:\Users\ASUS\OneDrive\Desktop\Amazecare case study\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
+[INFO]  :  No active profile set, falling back to 1 default profile: "default"
+[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]  :  Finished Spring Data repository scanning in 147 ms. Found 5 JPA repository interfaces.
+[INFO]  :  Tomcat initialized with port(s): 8081 (http)
+[INFO]  :  Starting service [Tomcat]
+[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
+[INFO]  :  Initializing Spring embedded WebApplicationContext
+[INFO]  :  Root WebApplicationContext: initialization completed in 5505 ms
+[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
+[INFO]  :  HHH000406: Using bytecode reflection optimizer
+[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO]  :  HikariPool-1 - Starting...
+[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d18338b
+[INFO]  :  HikariPool-1 - Start completed.
+[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.DoctorRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.PatientRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.AppointmentRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.MedicalRecordRepository
+[WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
+[INFO]  :  Started AmazecareApplication in 17.131 seconds (process running for 23.748)
+[INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]  :  Initializing Servlet 'dispatcherServlet'
+[INFO]  :  Completed initialization in 12 ms
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.AppointmentRestController
+[ERROR]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.hexaware.amazecare1.service.IAppointmentService.scheduleAppointment(int, com.hexaware.amazecare1.entities.Appointment)" because "this.service" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.hexaware.amazecare1.service.IAppointmentService.scheduleAppointment(int, com.hexaware.amazecare1.entities.Appointment)" because "this.service" is null
+	at com.hexaware.amazecare1.restcontroller.AppointmentRestController.scheduleAppointment(AppointmentRestController.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[ERROR]  :  Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.hexaware.amazecare1.service.IAppointmentService.scheduleAppointment(int, com.hexaware.amazecare1.entities.Appointment)" because "this.service" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.hexaware.amazecare1.service.IAppointmentService.scheduleAppointment(int, com.hexaware.amazecare1.entities.Appointment)" because "this.service" is null
+	at com.hexaware.amazecare1.restcontroller.AppointmentRestController.scheduleAppointment(AppointmentRestController.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+[INFO]  :  Application shutdown requested.
+[INFO]  :  Stopping service [Tomcat]
+[INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
+[INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO]  :  HikariPool-1 - Shutdown initiated...
+[INFO]  :  HikariPool-1 - Shutdown completed.
+[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 15076 (C:\Users\ASUS\OneDrive\Desktop\Amazecare case study\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by ASUS in C:\Users\ASUS\OneDrive\Desktop\Amazecare case study\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
+[INFO]  :  No active profile set, falling back to 1 default profile: "default"
+[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]  :  Finished Spring Data repository scanning in 172 ms. Found 5 JPA repository interfaces.
+[INFO]  :  Tomcat initialized with port(s): 8081 (http)
+[INFO]  :  Starting service [Tomcat]
+[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
+[INFO]  :  Initializing Spring embedded WebApplicationContext
+[INFO]  :  Root WebApplicationContext: initialization completed in 3349 ms
+[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
+[INFO]  :  HHH000406: Using bytecode reflection optimizer
+[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO]  :  HikariPool-1 - Starting...
+[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61c5fd78
+[INFO]  :  HikariPool-1 - Start completed.
+[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.PatientRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.AppointmentRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.DoctorRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.MedicalRecordRepository
+[WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
+[INFO]  :  Started AmazecareApplication in 11.184 seconds (process running for 14.345)
+[INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]  :  Initializing Servlet 'dispatcherServlet'
+[INFO]  :  Completed initialization in 4 ms
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.PatientRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.MedicalRecordRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.DoctorRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.PrescribeMedicationRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.AppointmentRestController
+[INFO]  :  Init duration for springdoc-openapi is: 2120 ms
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.AppointmentRestController
+[INFO]  :  Application shutdown requested.
+[INFO]  :  Stopping service [Tomcat]
+[INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
+[INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO]  :  HikariPool-1 - Shutdown initiated...
+[INFO]  :  HikariPool-1 - Shutdown completed.
+[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 10212 (C:\Users\ASUS\OneDrive\Desktop\Amazecare case study\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by ASUS in C:\Users\ASUS\OneDrive\Desktop\Amazecare case study\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
+[INFO]  :  No active profile set, falling back to 1 default profile: "default"
+[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]  :  Finished Spring Data repository scanning in 148 ms. Found 5 JPA repository interfaces.
+[INFO]  :  Tomcat initialized with port(s): 8081 (http)
+[INFO]  :  Starting service [Tomcat]
+[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
+[INFO]  :  Initializing Spring embedded WebApplicationContext
+[INFO]  :  Root WebApplicationContext: initialization completed in 3082 ms
+[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
+[INFO]  :  HHH000406: Using bytecode reflection optimizer
+[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO]  :  HikariPool-1 - Starting...
+[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f4a605f
+[INFO]  :  HikariPool-1 - Start completed.
+[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.PatientRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.AppointmentRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.DoctorRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.MedicalRecordRepository
+[WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
+[INFO]  :  Started AmazecareApplication in 10.692 seconds (process running for 12.719)
+[INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]  :  Initializing Servlet 'dispatcherServlet'
+[INFO]  :  Completed initialization in 86 ms
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.PatientRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.MedicalRecordRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.DoctorRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.PrescribeMedicationRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.AppointmentRestController
+[INFO]  :  Init duration for springdoc-openapi is: 4685 ms
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.AppointmentRestController
+[INFO]  :  Application shutdown requested.
+[INFO]  :  Stopping service [Tomcat]
+[INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
+[INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO]  :  HikariPool-1 - Shutdown initiated...
+[INFO]  :  HikariPool-1 - Shutdown completed.
+[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 2788 (C:\Users\ASUS\OneDrive\Desktop\Amazecare case study\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by ASUS in C:\Users\ASUS\OneDrive\Desktop\Amazecare case study\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
+[INFO]  :  No active profile set, falling back to 1 default profile: "default"
+[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]  :  Finished Spring Data repository scanning in 133 ms. Found 5 JPA repository interfaces.
+[INFO]  :  Tomcat initialized with port(s): 8081 (http)
+[INFO]  :  Starting service [Tomcat]
+[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
+[INFO]  :  Initializing Spring embedded WebApplicationContext
+[INFO]  :  Root WebApplicationContext: initialization completed in 2750 ms
+[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
+[INFO]  :  HHH000406: Using bytecode reflection optimizer
+[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO]  :  HikariPool-1 - Starting...
+[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6df37f7a
+[INFO]  :  HikariPool-1 - Start completed.
+[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.PatientRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.AppointmentRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.DoctorRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.MedicalRecordRepository
+[WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
+[INFO]  :  Started AmazecareApplication in 11.218 seconds (process running for 13.515)
+[INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]  :  Initializing Servlet 'dispatcherServlet'
+[INFO]  :  Completed initialization in 1 ms
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.PatientRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.MedicalRecordRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.DoctorRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.PrescribeMedicationRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.AppointmentRestController
+[INFO]  :  Init duration for springdoc-openapi is: 3660 ms
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.AppointmentRestController
+[INFO]  :  Application shutdown requested.
+[INFO]  :  Stopping service [Tomcat]
+[INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
+[INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO]  :  HikariPool-1 - Shutdown initiated...
+[INFO]  :  HikariPool-1 - Shutdown completed.
+[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 5200 (C:\Users\ASUS\OneDrive\Desktop\Amazecare case study\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by ASUS in C:\Users\ASUS\OneDrive\Desktop\Amazecare case study\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
+[INFO]  :  No active profile set, falling back to 1 default profile: "default"
+[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO]  :  Finished Spring Data repository scanning in 151 ms. Found 5 JPA repository interfaces.
+[INFO]  :  Tomcat initialized with port(s): 8081 (http)
+[INFO]  :  Starting service [Tomcat]
+[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
+[INFO]  :  Initializing Spring embedded WebApplicationContext
+[INFO]  :  Root WebApplicationContext: initialization completed in 3699 ms
+[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
+[INFO]  :  HHH000406: Using bytecode reflection optimizer
+[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO]  :  HikariPool-1 - Starting...
+[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ee456c7
+[INFO]  :  HikariPool-1 - Start completed.
+[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.PatientRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.AppointmentRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.DoctorRepository
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.repositories.MedicalRecordRepository
+[WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
+[INFO]  :  Started AmazecareApplication in 12.314 seconds (process running for 15.401)
+[INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]  :  Initializing Servlet 'dispatcherServlet'
+[INFO]  :  Completed initialization in 1 ms
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.PatientRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.MedicalRecordRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.DoctorRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.PrescribeMedicationRestController
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.AppointmentRestController
+[INFO]  :  Init duration for springdoc-openapi is: 2048 ms
+[WARN]  :  Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.amazecare1.restcontroller.AppointmentRestController
+[INFO]  :  Application shutdown requested.
+[INFO]  :  Stopping service [Tomcat]
+[INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
 [INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
 [INFO]  :  HikariPool-1 - Shutdown initiated...
 [INFO]  :  HikariPool-1 - Shutdown completed.

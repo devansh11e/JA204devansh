@@ -13,5 +13,5 @@ public interface IPatientService {
 	    String deletePatientById(int patientId) throws PatientNotFoundException;
 	    Patient getPatientById(int patientId) throws PatientNotFoundException;
 	    List<Patient> getByPatientName(String patientName) throws PatientNotFoundException;
-
+        
 }

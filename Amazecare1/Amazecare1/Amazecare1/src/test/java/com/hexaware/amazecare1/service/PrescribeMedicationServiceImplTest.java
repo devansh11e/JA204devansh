@@ -39,7 +39,7 @@ class PrescribeMedicationServiceImplTest {
 	@Test
 	void testPrescribeMedications() {
 		Patient patient = new Patient(101, "John Doe", "1990-05-15", "Male", 9876543210L, "Fever", "Routine Checkup", "2024-11-20");
-	    Doctor doctor = new Doctor(1, "Dr. Sharma", "Cardiology", 15, "MD", "Senior Consultant");
+	    Doctor doctor = new Doctor(1, "Dr. Sharma", "Cardiology", 15, "MD", "Senior Consultant","Available");
 
 	    PrescribeMedication prescription = new  PrescribeMedication(1001,patient,doctor,"Paracetamol", "500mg","Twice daily","5 days", "Take with water after meals", "2024-11-21", "2024-11-26",10);
 
