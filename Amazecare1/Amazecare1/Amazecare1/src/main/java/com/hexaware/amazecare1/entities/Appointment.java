@@ -1,5 +1,6 @@
 package com.hexaware.amazecare1.entities;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import jakarta.persistence.CascadeType;
@@ -12,10 +13,9 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Future;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 /*
- * Auhtor =Vinayak
+ * Author =Vinayak
  */
 @Entity
 @Table(name = "Appointment")
@@ -25,43 +25,51 @@ public class Appointment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int appointmentId;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "patient_id",referencedColumnName = "patient_id", nullable = false)
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "patient_id",referencedColumnName = "patient_id")
     private Patient patient; // Reference to the Patient entity
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "doctor_id",referencedColumnName = "doctor_id", nullable = false)
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "doctor_id",referencedColumnName = "doctor_id")
     private Doctor doctor; // Reference to the Doctor entity
 
     
     @Column(nullable = false)
     @Future
-    private Date appointmentDate; // Use Date for proper temporal handling
+    private LocalDate appointmentDate; // Use Date for proper temporal handling
 
-    @Column(nullable = false)
+    @NotNull(message = "TimeSlot is required")
     private String timeSlot;
 
-    @Column(nullable = false)
+    @NotNull(message = "Status is required")
     private String status;
-
+    
+    @NotNull(message = "Reason is required")
     private String reason;
 
     public Appointment() {
         super();
     }
+    
+   
 
-    public Appointment(int appointmentId, Patient patient, Doctor doctor, Date appointmentDate, String timeSlot, String status, String reason) {
-        super();
-        this.appointmentId = appointmentId;
-        this.patient = patient;
-        this.doctor = doctor;
-        this.appointmentDate = appointmentDate;
-        this.timeSlot = timeSlot;
-        this.status = status;
-        this.reason = reason;
-    }
+    public Appointment(int appointmentId, Patient patient, Doctor doctor, @Future LocalDate appointmentDate,
+			@NotNull(message = "TimeSlot is required") String timeSlot,
+			@NotNull(message = "Status is required") String status,
+			@NotNull(message = "Reason is required") String reason) {
+		super();
+		this.appointmentId = appointmentId;
+		this.patient = patient;
+		this.doctor = doctor;
+		this.appointmentDate = appointmentDate;
+		this.timeSlot = timeSlot;
+		this.status = status;
+		this.reason = reason;
+	}
 
-    // Getters and Setters
+
+
+	// Getters and Setters
     public int getAppointmentId() {
         return appointmentId;
     }
@@ -86,11 +94,11 @@ public class Appointment {
         this.doctor = doctor;
     }
 
-    public Date getAppointmentDate() {
+    public @Future LocalDate getAppointmentDate() {
         return appointmentDate;
     }
 
-    public void setAppointmentDate(Date appointmentDate) {
+    public void setAppointmentDate(@Future LocalDate appointmentDate) {
         this.appointmentDate = appointmentDate;
     }
 
@@ -120,8 +128,8 @@ public class Appointment {
 
     @Override
     public String toString() {
-        return "Appointment [appointmentId=" + appointmentId + ", patient=" + patient.getPatientName() 
-                + ", doctor=" + doctor.getDoctorName() + ", appointmentDate=" + appointmentDate 
+        return "Appointment [appointmentId=" + appointmentId + ", patient=" + patient 
+                + ", doctor=" + doctor + ", appointmentDate=" + appointmentDate 
                 + ", timeSlot=" + timeSlot + ", status=" + status + ", reason=" + reason + "]";
     }
 }

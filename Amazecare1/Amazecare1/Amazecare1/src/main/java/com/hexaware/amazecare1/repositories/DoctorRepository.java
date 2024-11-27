@@ -1,4 +1,7 @@
 package com.hexaware.amazecare1.repositories;
+/*
+ * Author=Devansh
+ */
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,5 +12,6 @@ import org.springframework.stereotype.Repository;
 import com.hexaware.amazecare1.entities.Doctor;
 @Repository
 public interface DoctorRepository extends JpaRepository<Doctor,Integer>{
+	//Finding doctor by Name
 	List<Doctor>  findByDoctorName(String doctor_name);
 }

@@ -1,5 +1,7 @@
 package com.hexaware.amazecare1.service;
-
+/*
+ * Author=Devansh
+ */
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -7,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.hexaware.amazecare1.dto.MedicalRecordDTO;
 import com.hexaware.amazecare1.entities.Appointment;
 import com.hexaware.amazecare1.entities.MedicalRecord;
 import com.hexaware.amazecare1.exceptions.AppointmentNotFoundException;
@@ -28,16 +31,43 @@ public class MedicalRecordServiceImpl implements IMedicalRecordService{
 	 Logger logger =LoggerFactory.getLogger( MedicalRecordServiceImpl.class);
 	 
 	 @Override
-	    public MedicalRecord conductConsultation(int appointmentId,MedicalRecord medical) throws AppointmentNotFoundException {
-	    	Appointment app = appointmentRepo.findById(appointmentId)
-	                .orElseThrow(() -> new AppointmentNotFoundException("Appointment not found with id: " +appointmentId));
-	        medical.setAppointment(app);
-	    	return medicalRecordRepo.save(medical);
-	    }
+	    public MedicalRecord conductConsultation(MedicalRecordDTO medicalDTO) throws AppointmentNotFoundException {
+	    	Appointment app = appointmentRepo.findById(medicalDTO.getAppointmentId())
+	                .orElseThrow(() -> new AppointmentNotFoundException("Appointment not found"));
+	    	 if ("Cancelled".equalsIgnoreCase(app.getStatus())) {
+	    	        throw new AppointmentNotFoundException("Appointment has been cancelled");
+	    	    }  
+	    	
+	                MedicalRecord medicalRecord = new MedicalRecord();
+	                medicalRecord.setAppointment(app);  // Set the appointment reference
+	                medicalRecord.setDiagnosis(medicalDTO.getDiagnosis());
+	                medicalRecord.setPrescription(medicalDTO.getPrescription());
+	                medicalRecord.setNotes(medicalDTO.getNotes());
+
+	                // Save the MedicalRecord entity
+	                return medicalRecordRepo.save(medicalRecord);
+	            }
+	    
 
 	    @Override
-	    public MedicalRecord updateMedicalRecord(MedicalRecord medical) {
-	        return medicalRecordRepo.save(medical);
+	    public String updateMedicalRecord(int recordId,MedicalRecordDTO medicalDTO) throws MedicalRecordNotFoundException, AppointmentNotFoundException{
+	    	MedicalRecord medicalRecord = medicalRecordRepo.findById(recordId)
+	                .orElseThrow(() -> new MedicalRecordNotFoundException("Record not found"));
+	    	Appointment app = appointmentRepo.findById(medicalDTO.getAppointmentId())
+	                .orElseThrow(() -> new AppointmentNotFoundException("Appointment not found"));
+	    	 if ("Cancelled".equalsIgnoreCase(app.getStatus())) {
+	    	        throw new AppointmentNotFoundException("Appointment has been cancelled");
+	    	    }  
+	    	      
+	                
+	                medicalRecord.setAppointment(app);  // Set the appointment reference
+	                medicalRecord.setDiagnosis(medicalDTO.getDiagnosis());
+	                medicalRecord.setPrescription(medicalDTO.getPrescription());
+	                medicalRecord.setNotes(medicalDTO.getNotes());
+
+	                // Save the MedicalRecord entity
+	                 medicalRecordRepo.save(medicalRecord);
+	                 return "Record updated Successfully";
 	    }
 
 	    @Override

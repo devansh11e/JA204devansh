@@ -1,5 +1,9 @@
 package com.hexaware.amazecare1.service;
 
+ /*
+  * Author=Vinayak
+  */
+ 
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -8,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.hexaware.amazecare1.entities.Patient;
+import com.hexaware.amazecare1.exceptions.DoctorNotFoundException;
 import com.hexaware.amazecare1.exceptions.PatientNotFoundException;
 import com.hexaware.amazecare1.repositories.PatientRepository;
 
@@ -28,9 +33,17 @@ public class PatientServiceImpl implements IPatientService{
 	    }
 
 	    @Override
-	    public Patient updatePatientInfo(Patient patient)  {
-	       
-	            return patientRepo.save(patient);
+	    public String updatePatientInfo(int patientId,Patient patient) throws PatientNotFoundException {
+	       Patient existing=patientRepo.findById(patientId).orElseThrow(()-> new PatientNotFoundException ("Patient not found with ID:  "+patientId));
+	       existing.setPatientName(patient.getPatientName());   
+	       existing.setDob(patient.getDob());
+	       existing.setGender(patient.getGender());
+	       existing.setContact(patient.getContact());
+	       existing.setSymptoms(patient.getSymptoms());
+	       existing.setNatureOfVisit(patient.getNatureOfVisit());
+	       existing.setPreferredDate(patient.getPreferredDate());
+	       patientRepo.save(existing);
+	             return "Patient Updated Successfully";
 	             
 	        }
 

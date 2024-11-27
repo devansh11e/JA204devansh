@@ -1,14 +1,19 @@
 package com.hexaware.amazecare1.entities;
+/*
+ * Author=Vinayak
+ */
 
+import java.time.LocalDate;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
@@ -23,34 +28,51 @@ public class Patient {
     private int patientId;
 
     @Column(nullable = false)
-    @Pattern(regexp = "[A-Z][a-z]{3}",message = "patientName must begin with Uppercase and should have 4 chars")
+    @Pattern(regexp = "[A-Z][a-z]+",message = "patientName must begin with Uppercase")
     private String patientName;
-     @Past
-    private String dob;
+    @Past
+    private LocalDate dob;
+    @NotNull(message = "Gender is required")
     private String gender;
-    @Size(min=10,max=10,message=" Contact  must be within desired limits")
-    private double contact;
+    @Size(min=10,max=10, message = "Contact must be exactly 10 digits")
+    private String contact;
+    @NotNull(message = "Symptoms is required")
     private String symptoms;
+    @NotNull(message = "Nature of Visit is required")
     private String natureOfVisit;
-    private String preferredDate;
+    @Future
+    private LocalDate preferredDate;
    
     public Patient() {
         super();
     }
+   
+   
 
-    public Patient(int patientId, String patientName, String dob, String gender, double contact, String symptoms, String natureOfVisit, String preferredDate) {
-        super();
-        this.patientId = patientId;
-        this.patientName = patientName;
-        this.dob = dob;
-        this.gender = gender;
-        this.contact = contact;
-        this.symptoms = symptoms;
-        this.natureOfVisit = natureOfVisit;
-        this.preferredDate = preferredDate;
-    }
 
-    // Getters and setters
+
+	public Patient(int patientId,
+			@Pattern(regexp = "[A-Z][a-z]+", message = "patientName must begin with Uppercase") String patientName,
+			@Past LocalDate dob, @NotNull(message = "Gender is required") String gender,
+			 @Size(min=10,max=10, message = "Contact must be exactly 10 digits") String contact,
+			@NotNull(message = "Symptoms is required") String symptoms,
+			@NotNull(message = "Nature of Visit is required") String natureOfVisit, @Future LocalDate preferredDate) {
+		super();
+		this.patientId = patientId;
+		this.patientName = patientName;
+		this.dob = dob;
+		this.gender = gender;
+		this.contact = contact;
+		this.symptoms = symptoms;
+		this.natureOfVisit = natureOfVisit;
+		this.preferredDate = preferredDate;
+	}
+
+
+
+
+
+	// Getters and setters
     public int getPatientId() {
         return patientId;
     }
@@ -67,11 +89,11 @@ public class Patient {
         this.patientName = patientName;
     }
 
-    public String getDob() {
+    public @Past LocalDate getDob() {
         return dob;
     }
 
-    public void setDob(String dob) {
+    public void setDob(@Past LocalDate dob) {
         this.dob = dob;
     }
 
@@ -83,15 +105,17 @@ public class Patient {
         this.gender = gender;
     }
 
-    public double getContact() {
-        return contact;
-    }
+    
 
-    public void setContact(double contact) {
-        this.contact = contact;
-    }
+    public String getContact() {
+		return contact;
+	}
 
-    public String getSymptoms() {
+	public void setContact(String contact) {
+		this.contact = contact;
+	}
+
+	public String getSymptoms() {
         return symptoms;
     }
 
@@ -107,11 +131,11 @@ public class Patient {
         this.natureOfVisit = natureOfVisit;
     }
 
-    public String getPreferredDate() {
+    public @Future LocalDate getPreferredDate() {
         return preferredDate;
     }
 
-    public void setPreferredDate(String preferredDate) {
+    public void setPreferredDate(@Future LocalDate preferredDate) {
         this.preferredDate = preferredDate;
     }
 

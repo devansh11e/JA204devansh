@@ -1,5 +1,7 @@
 package com.hexaware.amazecare1.service;
-
+/*
+ * Author=Devansh
+ */
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -22,17 +24,29 @@ public class DoctorServiceImpl implements IDoctorService{
 	 Logger logger =LoggerFactory.getLogger(DoctorServiceImpl.class);
 
 	 
-	 
+	 //Register Doctor
 	 @Override
 	    public Doctor registerDoctor(Doctor doctor) {
 	        return doctorRepo.save(doctor);
 	    }
 
+	 
+	 //Update Doctor
 	    @Override
-	    public Doctor updateDoctor(Doctor doctor) {
-	        return doctorRepo.save(doctor);
+	    public String updateDoctor(int doctorId,Doctor doctor)throws DoctorNotFoundException {
+	    	Doctor existing=doctorRepo.findById(doctorId).orElseThrow(()-> new DoctorNotFoundException("Doctor not found with ID:  "+doctorId));
+	    	existing.setDoctorName(doctor.getDoctorName());
+	    	existing.setSpeciality(doctor.getSpeciality());
+	    	existing.setExperience(doctor.getExperience());
+	    	existing.setQualification(doctor.getQualification());
+	    	existing.setDesignation(doctor.getDesignation());
+	    	existing.setAvailability(doctor.getAvailability());
+	         doctorRepo.save(existing);
+	         return "Doctor updated Successfully";
 	    }
 
+	    
+	    //Get Doctor By ID
 	    @Override
 	    public Doctor getDoctorById(int did) throws DoctorNotFoundException  {
 	        try {
@@ -45,6 +59,8 @@ public class DoctorServiceImpl implements IDoctorService{
 			}
 	    }
 
+	    
+	    //Delete Doctor By ID
 	    @Override
 	    public String deleteDoctorById(int did) throws DoctorNotFoundException {
 	        try {
@@ -64,6 +80,8 @@ public class DoctorServiceImpl implements IDoctorService{
 	    }
 
 
+	    
+	    //Get Doctor By Name
 	    @Override
 	    public List<Doctor> getByDoctorName(String doctorName) throws DoctorNotFoundException {
 	        try {
@@ -85,6 +103,8 @@ public class DoctorServiceImpl implements IDoctorService{
 	    }
 
 
+	    
+	    //View All doctors
 	    @Override
 	    public List<Doctor> viewAllDoctors() {
 	        return doctorRepo.findAll();

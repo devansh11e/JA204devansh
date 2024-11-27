@@ -8,6 +8,8 @@ import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 /*
  * Author=DEVANSH
@@ -19,8 +21,8 @@ public class Doctor {
   @Column(name="doctor_id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int doctorId;
-  @Column(name="doctor_name")
-  @Size(min=0,max=20,message=" Doctor name must be within desired limits")
+  @Column(nullable = false)
+  @Pattern(regexp = "^Dr\\.\\s?[A-Z][a-z]+(\\s[A-Z][a-z]+)*$", message = "Doctor Name must begin with 'Dr.' followed by capitalized names")
   private String doctorName;
   @Size(min=0,max=20,message=" Specialtity must be within desired limits")
   private String speciality;
@@ -31,19 +33,21 @@ public class Doctor {
   private String qualification;
   @Size(min=0,max=20,message=" Designation must be within desired limits")
   private String designation;
-  @Size(min=0,max=20,message=" Avalilability must be within desired limits")
+  @NotNull(message = "Available/Not Available is required")
   private String availability;
   
   public Doctor()
   {super();}
 
+
+
 public Doctor(int doctorId,
-		@Size(min = 0, max = 20, message = " Doctor name must be within desired limits") String doctorName,
+		@Pattern(regexp = "[A-Z][a-z]+", message = "Doctor Name must begin with Uppercase") String doctorName,
 		@Size(min = 0, max = 20, message = " Specialtity must be within desired limits") String speciality,
 		@Min(1) @Max(15) int experience,
 		@Size(min = 0, max = 20, message = " Qualification must be within desired limits") String qualification,
 		@Size(min = 0, max = 20, message = " Designation must be within desired limits") String designation,
-		@Size(min = 0, max = 20, message = " Avalilability must be within desired limits") String availability) {
+		@NotNull(message = "Available/Not Available is required") String availability) {
 	super();
 	this.doctorId = doctorId;
 	this.doctorName = doctorName;
@@ -53,6 +57,8 @@ public Doctor(int doctorId,
 	this.designation = designation;
 	this.availability = availability;
 }
+
+
 
 public int getDoctorId() {
 	return doctorId;

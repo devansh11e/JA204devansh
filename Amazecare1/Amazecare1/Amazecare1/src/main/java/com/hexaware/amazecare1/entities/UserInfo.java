@@ -1,5 +1,10 @@
 package com.hexaware.amazecare1.entities;
+/*
+ * Author= Vinayak & Devansh
+ */
+import java.util.Set;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -18,10 +23,13 @@ import jakarta.validation.constraints.Size;
 public class UserInfo {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Size(min=0,max=20,message=" user name must be within desired limits")
+    
+    @Column(nullable = false)
+    @Pattern(regexp = "[A-Z][a-z]+",message = "Name must begin with Uppercase")
+    @Size(min=0,max=20,message=" Name must be within desired limits")
     private String name; 
     
     @Email
@@ -29,18 +37,10 @@ public class UserInfo {
     
     @NotEmpty
     @NotBlank
-    @Pattern(regexp="[A-Z][a-z]{7,20}")
     private String password;
+    @NotBlank(message="role can be either admin,patient or doctor")
+    private String role;  //Admin, Patient, Doctor
     
-    @Enumerated(EnumType.STRING)
-    private Role role;
-    
-    
-    public enum Role {
-        DOCTOR,
-        PATIENT,
-        ADMIN
-    }
     
     
 
@@ -50,11 +50,10 @@ public class UserInfo {
 		// TODO Auto-generated constructor stub
 	}
 
-
-
-
-	public UserInfo(int id, @Size(min = 0, max = 20, message = " user name must be within desired limits") String name,
-			@Email String email, @NotEmpty @NotBlank @Pattern(regexp = "[A-Z][a-z]{7,20}") String password, Role role) {
+public UserInfo(int id,@Pattern(regexp = "[A-Z][a-z]+", message = "Name must begin with Uppercase") @Size(min = 0, max = 20, message = " Name must be within desired limits") String name,
+			@Email String email,
+			@NotEmpty @NotBlank String password,
+			@NotBlank(message = "role can be either admin,patient or doctor") String role) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -62,6 +61,11 @@ public class UserInfo {
 		this.password = password;
 		this.role = role;
 	}
+
+
+
+
+
 
 
 
@@ -120,12 +124,12 @@ public class UserInfo {
 	}
 
 
-	public Role getRole() {
+	public String getRole() {
 		return role;
 	}
 
 
-	public void setRole(Role role) {
+	public void setRole(String role) {
 		this.role = role;
 	}
 

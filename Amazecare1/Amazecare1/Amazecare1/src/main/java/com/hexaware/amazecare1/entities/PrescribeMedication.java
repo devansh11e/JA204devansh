@@ -1,5 +1,7 @@
 package com.hexaware.amazecare1.entities;
-
+/*
+ * Author = Devansh
+ */
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,6 +14,7 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 @Entity
 @Table(name="Prescription")
@@ -19,16 +22,16 @@ public class PrescribeMedication {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private int prescriptionId;
-  @ManyToOne(cascade = CascadeType.ALL)
+  @ManyToOne(cascade = CascadeType.MERGE)
   @JoinColumn(name = "patient_id", referencedColumnName = "patient_Id")
    private Patient patient;
   
  
-  @ManyToOne(cascade = CascadeType.ALL)
+  @ManyToOne(cascade = CascadeType.MERGE)
   @JoinColumn(name = "doctor_id", referencedColumnName = "doctor_Id")
    private Doctor doctor;
   
-  @Size(min=0,max=20,message=" Medicine name must be within desired limits")
+  @NotNull(message = "Medication Name is required")
    private String medicationName;
   @Size(min=0,max=20,message=" Dosage must be within desired limits")
    private String dosage;
@@ -36,11 +39,11 @@ public class PrescribeMedication {
    private String frequency;
   @Size(min=0,max=20,message=" Duration name must be within desired limits")
    private String duration;
-  @Size(min=0,max=20,message=" Instruction name must be within desired limits")
+  @NotNull(message = "Instruction is required")
    private String instruction;
-  @Future
+  @NotNull(message = "StartDate is required")
    private String startDate;
-  @Future
+  @NotNull(message = "EndDate is required")
    private String endDate;
   @Min(0)
   @Max(15)
@@ -49,8 +52,15 @@ public class PrescribeMedication {
    { super();
    
    }
-public PrescribeMedication(int prescriptionId, Patient patient, Doctor doctor, String medicationName, String dosage,
-		String frequency, String duration, String instruction, String startDate, String endDate, int quantity) {
+
+public PrescribeMedication(int prescriptionId, Patient patient, Doctor doctor,
+		@NotNull(message = "Medication Name is required") String medicationName,
+		@Size(min = 0, max = 20, message = " Dosage must be within desired limits") String dosage,
+		@Size(min = 0, max = 20, message = " Frequency name must be within desired limits") String frequency,
+		@Size(min = 0, max = 20, message = " Duration name must be within desired limits") String duration,
+		@NotNull(message = "Instruction is required") String instruction,
+		@NotNull(message = "StartDate is required") String startDate,
+		@NotNull(message = "EndDate is required") String endDate, @Min(0) @Max(15) int quantity) {
 	super();
 	this.prescriptionId = prescriptionId;
 	this.patient = patient;
@@ -64,6 +74,7 @@ public PrescribeMedication(int prescriptionId, Patient patient, Doctor doctor, S
 	this.endDate = endDate;
 	this.quantity = quantity;
 }
+
 public int getPrescriptionId() {
 	return prescriptionId;
 }
