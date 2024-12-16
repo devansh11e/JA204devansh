@@ -25,10 +25,10 @@ class PrescribeMedicationRestControllerTest {
     @Test
     void testPrescribeMedications() {
         // Create a Patient object using constructor
-        Patient patient = new Patient(0, "John", LocalDate.of(1990, 5, 15), "Male", "9876543210", "Headache", "Routine Checkup", LocalDate.of(2024, 12, 1));
+        Patient patient = new Patient(1, "John", LocalDate.of(1990, 5, 15), "Male", "9876543210");
         
         // Create a Doctor object using constructor
-        Doctor doctor = new Doctor(0, "Dr. Smith", "General Physician", 5, "MBBS", "Consultant", "9 AM - 5 PM");
+        Doctor doctor = new Doctor(1, "Dr. Smith", "General Physician", 5, "MBBS", "Consultant", "9 AM - 5 PM");
         
         // Create PrescribeMedication object using constructor
         PrescribeMedication prescription = new PrescribeMedication(0, patient, doctor, "Aspirin", "500mg","Twice a day","5 days", "Take after meals", "2024-11-26", "2024-11-30", 30 );

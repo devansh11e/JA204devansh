@@ -3,6 +3,7 @@ package com.hexaware.amazecare1.service;
  * Author=Devansh
  */
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -71,10 +72,11 @@ public class MedicalRecordServiceImpl implements IMedicalRecordService{
 	    }
 
 	    @Override
-	    public MedicalRecord getRecordById(int rid) throws MedicalRecordNotFoundException {
+	    public MedicalRecordDTO getRecordById(int rid) throws MedicalRecordNotFoundException {
 	        try {
-	            return medicalRecordRepo.findById(rid)
+	            MedicalRecord medical= medicalRecordRepo.findById(rid)
 	                    .orElseThrow(() -> new MedicalRecordNotFoundException("Medical record not found with id: " + rid));
+	            return convertToDTO(medical);
 	        } catch (MedicalRecordNotFoundException e) {
 	            e.printStackTrace(); // Log the exception details
 	            throw e; // Re-throw the exception to let the caller handle it
@@ -82,7 +84,7 @@ public class MedicalRecordServiceImpl implements IMedicalRecordService{
 	    }
 
 	    @Override
-	    public List<MedicalRecord> getByDiagnosis(String diagnosis) throws MedicalRecordNotFoundException {
+	    public List<MedicalRecordDTO> getByDiagnosis(String diagnosis) throws MedicalRecordNotFoundException {
 	        try {
 	            // Fetch medical records by diagnosis
 	            List<MedicalRecord> records = medicalRecordRepo.findByDiagnosis(diagnosis);
@@ -93,7 +95,9 @@ public class MedicalRecordServiceImpl implements IMedicalRecordService{
 	            }
 
 	            // Return the found records
-	            return records;
+	            return records.stream()
+		                .map(this::convertToDTO)
+		                .collect(Collectors.toList());
 	        } catch (MedicalRecordNotFoundException ex) {
 	            // Log the exception message and rethrow the exception
 	            System.err.println(ex.getMessage());
@@ -103,9 +107,22 @@ public class MedicalRecordServiceImpl implements IMedicalRecordService{
 
 
 	    @Override
-	    public List<MedicalRecord> viewMedicalHistory() {
-	        return medicalRecordRepo.findAll();
+	    public List<MedicalRecordDTO> viewMedicalHistory() {
+	        List<MedicalRecord> records = medicalRecordRepo.findAll();
+	        return records.stream()
+	                .map(this::convertToDTO)
+	                .collect(Collectors.toList());
 	    }
 
+	    // Helper method to map MedicalRecord to MedicalRecordDTO
+	    private MedicalRecordDTO convertToDTO(MedicalRecord record) {
+	        MedicalRecordDTO dto = new MedicalRecordDTO();
+	        dto.setRecordId(record.getRecordId());
+	        dto.setAppointmentId(record.getAppointment().getAppointmentId());
+	        dto.setDiagnosis(record.getDiagnosis());
+	        dto.setPrescription(record.getPrescription());
+	        dto.setNotes(record.getNotes());
+	        return dto;
+	    }
 
 }

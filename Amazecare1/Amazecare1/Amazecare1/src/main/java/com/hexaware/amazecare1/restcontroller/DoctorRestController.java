@@ -1,13 +1,17 @@
 package com.hexaware.amazecare1.restcontroller;
+import java.util.HashMap;
 /*
  * Author=Devansh
  */
 import java.util.List;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,7 +26,7 @@ import com.hexaware.amazecare1.exceptions.DoctorNotFoundException;
 import com.hexaware.amazecare1.service.IDoctorService;
 
 import jakarta.validation.Valid;
-
+//@CrossOrigin("http://localhost:4200")
 @RestController
 @RequestMapping("/api/doctors")
 public class DoctorRestController {
@@ -45,14 +49,18 @@ public class DoctorRestController {
 	//Updating Doctor by DoctorId
 	@PutMapping("/updateDoctor/{doctorId}")
 	@PreAuthorize("hasAuthority('doctor')")
-	public String  updateDoctor(@PathVariable int doctorId,@Valid @RequestBody Doctor doc) throws DoctorNotFoundException{
+	public ResponseEntity<Map<String, String>>  updateDoctor(@PathVariable int doctorId,@Valid @RequestBody Doctor doc) throws DoctorNotFoundException{
 
-		return service.updateDoctor(doctorId,doc);}
+		service.updateDoctor(doctorId,doc);
+		 Map<String, String> response = new HashMap<>();
+	        response.put("message", "Doctor Updated Successfully");
+
+	        return ResponseEntity.ok(response);}
 	
 	
 	//Get Doctor By ID
 	@GetMapping("/getDoctorbyid/{did}") 
-	@PreAuthorize("hasAuthority('admin')")
+	@PreAuthorize("hasAuthority('admin') or hasAuthority('patient') or hasAuthority('doctor')")
 	public Doctor   getDoctorById(@PathVariable int did) throws DoctorNotFoundException  {
 		
 		return  service.getDoctorById(did);
@@ -62,20 +70,11 @@ public class DoctorRestController {
 	
 	// Get All Doctor
 	@GetMapping(value="/getallDoctor",produces = "application/json")
-	@PreAuthorize("hasAuthority('admin') or hasAuthority('patient') ")
+	@PreAuthorize(" hasAuthority('patient') ")
 	public List<Doctor>  viewAllDoctors(){
 		
 		
 		return service.viewAllDoctors();
-		
-	}
-	
-	//Delete Doctor By ID
-	@DeleteMapping("/deleteDoctorbyid/{did}") 
-	@PreAuthorize("hasAuthority('admin')")
-	public String  deleteDoctorById(@PathVariable int did) throws DoctorNotFoundException {
-		
-		return  service.deleteDoctorById(did);
 		
 	}
 	

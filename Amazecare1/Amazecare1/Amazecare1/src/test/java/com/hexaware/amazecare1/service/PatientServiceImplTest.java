@@ -45,7 +45,7 @@ class PatientServiceImplTest {
         // Arrange
     	LocalDate prefferedDate = LocalDate.of(2024, 11, 25);
     	LocalDate dateofbirth=LocalDate.of(2001, 7, 1);
-        Patient patient = new Patient(1001, "Mock Vinayak", dateofbirth, "Male", "7748049010", "Anxiety", "General", prefferedDate);
+        Patient patient = new Patient(1, "Mock Vinayak", dateofbirth, "Male", "7748049010");
         when(patientRepo.save(patient)).thenReturn(patient);
 
         // Act
@@ -59,27 +59,12 @@ class PatientServiceImplTest {
     }
 
     @Test
-    void testDeletePatientByIdWithMock() {
-        // Arrange
-        int patientId = 1001;
-      doNothing().when(patientRepo).deleteById(patientId); 
-        
-        // Act
-        String result = serviceImpl.deletePatientById(patientId);
-
-        // Assert
-        assertEquals("Patient deleted successfully.", result);
-        verify(patientRepo, times(1)).deleteById(patientId); // Verify interaction with the mock
-        logger.info("Mock test for deletePatientById passed: {}", result);
-    }
-
-    @Test
     void testGetPatientByIdWithMock() {
     	LocalDate prefferedDate = LocalDate.of(2024, 11, 25);
     	LocalDate dateofbirth=LocalDate.of(2001, 7, 1);
         // Arrange
-        int patientId = 1001;
-        Patient mockPatient = new Patient(patientId, "Mock Vinayak", dateofbirth, "Male", "7748049010", "Fever", "General", prefferedDate);
+        int patientId = 1;
+        Patient mockPatient = new Patient(patientId, "Mock Vinayak", dateofbirth, "Male", "7748049010");
         when(patientRepo.findById(patientId)).thenReturn(Optional.of(mockPatient));
 
         // Act
@@ -94,11 +79,10 @@ class PatientServiceImplTest {
 
     @Test
     void testGetByPatientNameWithMock() {
-    	LocalDate prefferedDate = LocalDate.of(2024, 11, 25);
     	LocalDate dateofbirth=LocalDate.of(2001, 7, 1);
         // Arrange
         String patientName = "Mock Vinayak";
-        Patient patient = new Patient(1001, patientName, dateofbirth, "Male", "7748049010", "Anxiety", "General",prefferedDate);
+        Patient patient = new Patient(1, patientName, dateofbirth, "Male", "7748049010");
         when(patientRepo.findByPatientName(patientName)).thenReturn(Arrays.asList(patient));
 
         // Act

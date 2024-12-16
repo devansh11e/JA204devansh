@@ -15,9 +15,8 @@ public class GlobalExceptionHandler {
 
     // This method handles all NotFoundException thrown in the application
     @ExceptionHandler({ PatientNotFoundException.class })
-    @ResponseStatus(code = HttpStatus.NOT_FOUND) // Sets HTTP status to 404
-    public String handleNotFoundException(PatientNotFoundException ex) {
-        return ex.getMessage();  // Return the message of the exception
+    public ResponseEntity<Object> handlePatientNotFound(PatientNotFoundException ex) {
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
     
     @ExceptionHandler(DoctorNotFoundException.class)

@@ -15,9 +15,13 @@ public interface IAppointmentService {
 	//Scheduling
 	  Appointment scheduleAppointment( AppointmentDTO appointmentDTO) throws PatientNotFoundException,DoctorNotFoundException;
 	  //Finding by Patient ID 
-	  List<Appointment> findAppointmentByPatientId(Integer patientId) throws PatientNotFoundException;
-	  //Finding by Doctor ID 
-	  List<Appointment> findAppointmentByDoctorId(Integer doctorId) throws DoctorNotFoundException;
+	  AppointmentDTO findAppointmentById(Integer appointmentId) throws AppointmentNotFoundException;
 	  //Cancelling appointment 
 	  int cancelAppointment(int appointmentId) throws AppointmentNotFoundException;
+	  
+	  List<AppointmentDTO> viewAppointments();
+	  
+	  List<AppointmentDTO> findAppointmentByDoctor_DoctorId(Integer doctorId) throws DoctorNotFoundException;
+	  
+	  String updateAppointment(int appointmentId,AppointmentDTO appointmentDTO)  throws PatientNotFoundException,DoctorNotFoundException, AppointmentNotFoundException;
 }

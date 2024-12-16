@@ -10,18 +10,18 @@ import com.hexaware.amazecare1.exceptions.PatientNotFoundException;
 public interface IPatientService {
 	
 	//Register patient
-	 Patient registerPatient(Patient patient);
+	   Patient registerPatient(Patient patient);
 	 
 	 //Updating Patient
 	    String updatePatientInfo(int patientId,Patient patient)throws PatientNotFoundException;
 
-	    // Delete Patient By ID
-	    String deletePatientById(int patientId) throws PatientNotFoundException;
 	    
 	    //Get Patient By ID
 	    Patient getPatientById(int patientId) throws PatientNotFoundException;
 	    
 	    //Get Patient by Name
 	    List<Patient> getByPatientName(String patientName) throws PatientNotFoundException;
+	    
+	    List<Patient> viewAllPatients();
         
 }

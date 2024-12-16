@@ -34,17 +34,16 @@ class PrescribeMedicationServiceImplTest {
 	@Test
 	void testGetPrescriptionById() throws PrescriptionNotFoundException {
 		 int prescriptionId = 1;
-		    PrescribeMedication prescription = service.getPrescriptionById(prescriptionId);
+		    PrescribeMedicationDTO prescription = service.getPrescriptionById(prescriptionId);
 		    assertNotNull(prescription);
 		    logger.info("Prescription retrieved successfully: {}", prescription);
 	}
 
 	@Test
 	void testPrescribeMedications() throws PatientNotFoundException, DoctorNotFoundException {
-		LocalDate prefferedDate = LocalDate.of(2024, 11, 25);
-		LocalDate dateofbirth=LocalDate.of(2001, 7, 1);
-		 Integer patientId = 1001;
- 	    Integer doctorId = 100;
+		
+		 Integer patientId = 1;
+ 	    Integer doctorId = 1;
 
 	    PrescribeMedicationDTO prescription = new  PrescribeMedicationDTO(1,patientId,doctorId,"Paracetamol", "500mg","Twice daily","5 days", "Take with water after meals", "2024-11-21", "2024-11-26",10);
 
@@ -60,7 +59,7 @@ class PrescribeMedicationServiceImplTest {
 	@Test
 	void testViewAllPrescriptions() {
 		 
-		    List<PrescribeMedication> prescriptions = service.viewAllPrescriptions();
+		    List<PrescribeMedicationDTO> prescriptions = service.viewAllPrescriptions();
 		    assertNotNull(prescriptions);
 		    assertFalse(prescriptions.isEmpty());
 		    logger.info("All prescriptions retrieved successfully: {}", prescriptions);

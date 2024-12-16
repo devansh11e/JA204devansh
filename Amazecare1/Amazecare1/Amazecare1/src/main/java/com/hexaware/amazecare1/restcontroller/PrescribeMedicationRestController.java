@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +25,7 @@ import com.hexaware.amazecare1.exceptions.PrescriptionNotFoundException;
 import com.hexaware.amazecare1.service.IPrescribeMedicationService;
 
 import jakarta.validation.Valid;
-
+@CrossOrigin("http://localhost:4200")
 @RestController
 @RequestMapping("/api/prescribemedications")
 public class PrescribeMedicationRestController {
@@ -45,20 +46,20 @@ public class PrescribeMedicationRestController {
 		//Get Prescription by ID
 		@GetMapping("/getPrescriptionbyid/{pid}") 
 		@PreAuthorize("hasAuthority('admin')")
-		public PrescribeMedication   getPrescriptionById(@PathVariable int pid) throws PrescriptionNotFoundException {
+		public ResponseEntity<PrescribeMedicationDTO>   getPrescriptionById(@PathVariable int pid) throws PrescriptionNotFoundException {
 			
-			return  service.getPrescriptionById(pid);
+			PrescribeMedicationDTO pres=service.getPrescriptionById(pid);
+			return ResponseEntity.ok(pres);
 
 	}
 		
 		//Get All Prescriptions
 		@GetMapping(value="/getallprescriptions",produces = "application/json")
 		@PreAuthorize("hasAuthority('admin')")
-		public List<PrescribeMedication>  viewAllPrescriptions(){
-			
-			
-			return service.viewAllPrescriptions();}	
-		
+		public ResponseEntity<List<PrescribeMedicationDTO>> viewPrescriptions() {
+	        List<PrescribeMedicationDTO> prescriptions = service.viewAllPrescriptions();
+	        return ResponseEntity.ok(prescriptions); // Return the list of PrescriptionDTOs
+	    }
 		
 		
 		//Get Prescription by Patient ID
@@ -69,7 +70,7 @@ public class PrescribeMedicationRestController {
 	            return ResponseEntity.badRequest().body("Patient ID is required.");
 	        }
 
-	        List<PrescribeMedication> prescriptions = service.findPrescriptionByPatientId(patientId);
+	        List<PrescribeMedicationDTO> prescriptions = service.findPrescriptionByPatientId(patientId);
 
 	        if (prescriptions.isEmpty()) {
 	            throw new PatientNotFoundException("No Patient found for patient ID: " + patientId);

@@ -17,11 +17,11 @@ public interface IMedicalRecordService {
     String updateMedicalRecord(int recordId,MedicalRecordDTO medicalDTO) throws AppointmentNotFoundException, MedicalRecordNotFoundException;
     
     //Get Record BY ID
-    MedicalRecord getRecordById(int rid) throws MedicalRecordNotFoundException;
+    MedicalRecordDTO getRecordById(int rid) throws MedicalRecordNotFoundException;
     
     //View Medical History
-    List<MedicalRecord> viewMedicalHistory();
+    List<MedicalRecordDTO> viewMedicalHistory();
     
     //Get By Diagnosis
-    List<MedicalRecord> getByDiagnosis(String diagnosis) throws MedicalRecordNotFoundException;
+    List<MedicalRecordDTO> getByDiagnosis(String diagnosis) throws MedicalRecordNotFoundException;
 }

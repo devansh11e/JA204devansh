@@ -3,6 +3,7 @@ package com.hexaware.amazecare1.service;
  * Author=Devansh
  */
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -61,23 +62,41 @@ public class PrescribeMedicationServiceImpl implements IPrescribeMedicationServi
 	    
 
 	    @Override
-	    public PrescribeMedication getPrescriptionById(int pid) throws PrescriptionNotFoundException {
-	        try {
-	            return medicationRepo.findById(pid)
+	    public PrescribeMedicationDTO getPrescriptionById(int pid) throws PrescriptionNotFoundException {
+	        	 PrescribeMedication pres=medicationRepo.findById(pid)
 	                    .orElseThrow(() -> new PrescriptionNotFoundException("Prescription not found with id: " + pid));
-	        } catch (PrescriptionNotFoundException e) {
-	            e.printStackTrace(); // Log the exception details
-	            throw e; // Re-throw the exception to let the caller handle it
-	        }
+	         return convertToDTO(pres);
+	       
 	    }
 
 	    @Override
-	    public List<PrescribeMedication> viewAllPrescriptions() {
-	        return medicationRepo.findAll();
+	    public List<PrescribeMedicationDTO> viewAllPrescriptions() {
+	        List<PrescribeMedication> prescriptions = medicationRepo.findAll();
+	        return prescriptions.stream()
+	                .map(this::convertToDTO)
+	                .collect(Collectors.toList());
 	    }
 
+	    // Helper method to map Prescription to PrescriptionDTO
+	    private PrescribeMedicationDTO convertToDTO(PrescribeMedication prescription) {
+	        PrescribeMedicationDTO dto = new PrescribeMedicationDTO();
+	        dto.setPrescriptionId(prescription.getPrescriptionId());
+	        dto.setPatientId(prescription.getPatient().getPatientId());
+	        dto.setDoctorId(prescription.getDoctor().getDoctorId());
+	        dto.setMedicationName(prescription.getMedicationName());
+	        dto.setDosage(prescription.getDosage());
+	        dto.setFrequency(prescription.getFrequency());
+	        dto.setDuration(prescription.getDuration());
+	        dto.setInstruction(prescription.getInstruction());
+	        dto.setStartDate(prescription.getStartDate());
+	        dto.setEndDate(prescription.getEndDate());
+	        dto.setQuantity(prescription.getQuantity());
+	        return dto;
+	    }
+
+
 		@Override
-		public List<PrescribeMedication> findPrescriptionByPatientId(Integer patientId) throws PatientNotFoundException{
+		public List<PrescribeMedicationDTO> findPrescriptionByPatientId(Integer patientId) throws PatientNotFoundException{
 			 try {
 		            List<PrescribeMedication> pres = medicationRepo.findPrescriptionByPatient_PatientId(patientId);
 		            
@@ -86,7 +105,9 @@ public class PrescribeMedicationServiceImpl implements IPrescribeMedicationServi
 		                throw new PatientNotFoundException("No patients found with ID: " + patientId);
 		            }
 		            
-		            return pres;
+		            return pres.stream()
+			                .map(this::convertToDTO)
+			                .collect(Collectors.toList());
 		        } catch (PatientNotFoundException e) {
 		            // Handle the exception (e.g., log it)
 		            System.err.println("Error: " + e.getMessage());

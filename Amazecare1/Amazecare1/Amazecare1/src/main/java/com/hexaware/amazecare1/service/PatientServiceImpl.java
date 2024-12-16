@@ -39,32 +39,11 @@ public class PatientServiceImpl implements IPatientService{
 	       existing.setDob(patient.getDob());
 	       existing.setGender(patient.getGender());
 	       existing.setContact(patient.getContact());
-	       existing.setSymptoms(patient.getSymptoms());
-	       existing.setNatureOfVisit(patient.getNatureOfVisit());
-	       existing.setPreferredDate(patient.getPreferredDate());
+	      
 	       patientRepo.save(existing);
 	             return "Patient Updated Successfully";
 	             
 	        }
-
-
-	    @Override
-	    public String deletePatientById(int patientId) throws PatientNotFoundException {
-	        try {
-	            // Check if the patient exists before attempting deletion
-	            if (!patientRepo.existsById(patientId)) {
-	                // If not, throw a NotFoundException with a custom message
-	                throw new PatientNotFoundException("Patient not found with id: " + patientId);
-	            }
-	            // If the patient exists, delete the patient
-	            patientRepo.deleteById(patientId);
-	            return "Patient deleted successfully.";
-	        } catch (PatientNotFoundException ex) {
-	            // Log the exception message and rethrow the exception
-	            System.err.println(ex.getMessage());
-	            throw ex;
-	        }
-	    }
 
 
 	    @Override
@@ -99,4 +78,12 @@ public class PatientServiceImpl implements IPatientService{
 	            throw e;
 	        }
 	    }
+
+		@Override
+		public List<Patient> viewAllPatients() {
+			// TODO Auto-generated method stub
+			return patientRepo.findAll();
+		}
+	    
+	    
 }

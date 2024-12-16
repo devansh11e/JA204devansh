@@ -37,9 +37,10 @@ public class SecurityConfig {
     @Bean
     public  SecurityFilterChain   getSecurityFilterChain(HttpSecurity http) throws Exception {
     	
-    	 return http.csrf(csrf -> csrf.disable())
+    	 return http.cors().and().csrf().disable()
     		        .authorizeHttpRequests(auth -> auth
-    		            .requestMatchers("/users/registration/new", "/users/login/authenticate").permitAll()
+    		            .requestMatchers("/users/registration/new", "/users/login/authenticate","/v3/api-docs/", "/swagger-ui/", "/swagger-ui.html", "/webjars/", "/swagger-resources/").permitAll()
+    		            .requestMatchers("/users/role","/users/check-username","/users/forgot-password").permitAll()
     		            .requestMatchers("/api/patients/**","/api/prescribemedications/**","/api/doctors/**","/api/appointments/**","/api/medicalrecords/**").authenticated()
     		        )
     		        .sessionManagement(session -> session

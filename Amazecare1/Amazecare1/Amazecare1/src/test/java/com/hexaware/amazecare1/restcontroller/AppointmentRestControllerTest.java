@@ -34,10 +34,10 @@ class AppointmentRestControllerTest {
     void testScheduleAppointment() {
         // Set up Patient and Doctor objects (these should already exist in the database)
         Patient patient = new Patient();
-        patient.setPatientId(101); // Replace with a valid patientId from your database
+        patient.setPatientId(1); // Replace with a valid patientId from your database
 
         Doctor doctor = new Doctor();
-        doctor.setDoctorId(201); // Replace with a valid doctorId from your database
+        doctor.setDoctorId(1); // Replace with a valid doctorId from your database
 
         // Create an appointment
         Appointment appointment = new Appointment();
@@ -56,14 +56,13 @@ class AppointmentRestControllerTest {
 
         assertNotNull(scheduledAppointment);
         assertEquals("Scheduled", scheduledAppointment.getStatus());
-        assertEquals(101, scheduledAppointment.getPatient().getPatientId());
-        assertEquals(201, scheduledAppointment.getDoctor().getDoctorId());
+        assertEquals(1, scheduledAppointment.getPatient().getPatientId());  // Check correct Patient ID
+        assertEquals(1, scheduledAppointment.getDoctor().getDoctorId());    // Check correct Doctor ID
     }
-
 
     @Test
     void testCancelAppointment() {
-        int appointmentId = 301; // Replace with a valid appointmentId from your database
+        int appointmentId = 1; // Replace with a valid appointmentId from your database
 
         // Cancel the appointment
         restTemplate.delete("http://localhost:8081/api/appointments/cancelappointment/" + appointmentId);
@@ -75,6 +74,6 @@ class AppointmentRestControllerTest {
         Appointment appointment = response.getBody();
 
         assertNotNull(appointment);
-        assertEquals("Canceled", appointment.getStatus());
+        assertEquals("Cancelled", appointment.getStatus());  // Ensure status is updated to "Cancelled"
     }
 }

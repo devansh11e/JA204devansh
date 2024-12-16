@@ -56,8 +56,8 @@ class MedicalRecordServiceImplTest {
     	Patient patient = mock(Patient.class);
         Doctor doctor = mock(Doctor.class);
         Appointment appointment = new Appointment(1, patient, doctor, appointmentDate, "3 PM", "Cancelled", "Hypertension");
-        MedicalRecordDTO medicalRecord = new MedicalRecordDTO(100, appointmentId, "Anxiety", "Amoxicillin", "Patient is stable");
-        MedicalRecord medical = new MedicalRecord(100, appointment, "Anxiety", "Amoxicillin", "Patient is stable");
+        MedicalRecordDTO medicalRecord = new MedicalRecordDTO(1, appointmentId, "Anxiety", "Amoxicillin", "Patient is stable");
+        MedicalRecord medical = new MedicalRecord(1, appointment, "Anxiety", "Amoxicillin", "Patient is stable");
         when(medicalRepo.save(any(MedicalRecord.class))).thenReturn(medical);
         
 
@@ -74,7 +74,7 @@ class MedicalRecordServiceImplTest {
         List<MedicalRecord> records = Arrays.asList(new MedicalRecord());
         when(medicalRepo.findAll()).thenReturn(records);
 
-        List<MedicalRecord> fetchedRecords = serviceImpl.viewMedicalHistory();
+        List<MedicalRecordDTO> fetchedRecords = serviceImpl.viewMedicalHistory();
 
         assertNotNull(fetchedRecords);
         assertFalse(fetchedRecords.isEmpty());

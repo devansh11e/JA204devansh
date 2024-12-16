@@ -16,11 +16,11 @@ public interface IPrescribeMedicationService {
 	PrescribeMedication prescribeMedications(PrescribeMedicationDTO presDTO)throws PatientNotFoundException,DoctorNotFoundException;
     
 	//Get Prescription By ID
-	PrescribeMedication getPrescriptionById(int pid) throws PrescriptionNotFoundException;
+	PrescribeMedicationDTO getPrescriptionById(int pid) throws PrescriptionNotFoundException;
 	
 	//View All Prescriptions
-    List<PrescribeMedication> viewAllPrescriptions();
+    List<PrescribeMedicationDTO> viewAllPrescriptions();
     
     //Find Prescription By Patient ID
-    List<PrescribeMedication>  findPrescriptionByPatientId(Integer patientId) throws PatientNotFoundException;
+    List<PrescribeMedicationDTO>  findPrescriptionByPatientId(Integer patientId) throws PatientNotFoundException;
 }

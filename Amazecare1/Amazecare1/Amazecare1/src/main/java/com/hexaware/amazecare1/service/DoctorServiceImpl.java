@@ -59,25 +59,7 @@ public class DoctorServiceImpl implements IDoctorService{
 			}
 	    }
 
-	    
-	    //Delete Doctor By ID
-	    @Override
-	    public String deleteDoctorById(int did) throws DoctorNotFoundException {
-	        try {
-	            // Check if the doctor exists before attempting deletion
-	            if (!doctorRepo.existsById(did)) {
-	                // If not, throw a custom exception with a relevant message
-	                throw new DoctorNotFoundException("Doctor with ID " + did + " not found");
-	            }
-	            // If the doctor exists, delete the doctor
-	            doctorRepo.deleteById(did);
-	            return "Doctor Record Deleted";
-	        } catch (DoctorNotFoundException ex) {
-	            // Log the exception message and rethrow the exception
-	            System.err.println(ex.getMessage());
-	            throw ex;
-	        }
-	    }
+	   
 
 
 	    

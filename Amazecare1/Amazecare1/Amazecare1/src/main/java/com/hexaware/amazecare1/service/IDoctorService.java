@@ -18,8 +18,6 @@ public interface IDoctorService {
 	    //Get DoctorById
 	    Doctor getDoctorById(int did) throws DoctorNotFoundException;
 	    
-	    //Delete Doctor by ID
-	    String deleteDoctorById(int did) throws DoctorNotFoundException;
 	    
 	    
 	    //Get Doctor by Name

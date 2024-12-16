@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Appointment</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background-color: #343a40;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .navbar .nav-link {
+      color: #fff;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+    .navbar .nav-link:hover {
+      color: #2575fc;
+    }
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+    .form-inline {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .form-control {
+      margin-right: 10px;
+      border-radius: 8px;
+      width: 250px;
+    }
+    .btn-outline-success {
+      border-radius: 8px;
+      background-color: #feb47b;
+      color: #fff;
+      font-weight: bold;
+    }
+    .btn-outline-success:hover {
+      background-color: #ff7e5f;
+    }
+    .table-container {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-top: 30px;
+    }
+    .table {
+      width: 100%;
+      margin-bottom: 1rem;
+      background-color: #212529;
+      color: #fff;
+    }
+    .table th, .table td {
+      text-align: center;
+    }
+    .table th {
+      background-color: #343a40;
+    }
+    .table-dark {
+      background-color: #212529;
+    }
+    .table .btn-danger {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm bg-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin">Back To Dashboard</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Search Form -->
+  <h1>Search Appointment</h1>
+  <form class="form-inline" #appointmentForm="ngForm" (ngSubmit)="getAppointmentById(appointmentForm.value)">
+    <input 
+      class="form-control mr-sm-2" 
+      type="search" 
+      placeholder="Search By ID" 
+      aria-label="Search" 
+      name="appointmentId" 
+      ngModel 
+    >
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+
+  <!-- Appointment Table -->
+  <div class="container col-lg-10">
+    <div class="table-container">
+      <table class="table table-dark" *ngIf="appointment">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Patient ID</th>
+            <th>Doctor ID</th>
+            <th>Appointment Date</th>
+            <th>Time Slot</th>
+            <th>Status</th>
+            <th>Reason</th>
+            <th>CANCEL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{appointment.appointmentId}}</td>
+            <td>{{appointment.patientId}}</td>
+            <td>{{appointment.doctorId}}</td>
+            <td>{{appointment.appointmentDate | date}}</td>
+            <td>{{appointment.timeSlot}}</td>
+            <td>{{appointment.status}}</td>
+            <td>{{appointment.reason}}</td>
+            <td>
+              <button 
+                type="button" 
+                (click)="deleteByAppointmentId(appointment.appointmentId)" 
+                class="btn btn-danger"
+              >
+                CANCEL
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

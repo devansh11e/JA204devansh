@@ -51,22 +51,22 @@ class AppointmentServiceImplTest {
 
     @Test
     void testScheduleAppointment() throws PatientNotFoundException, DoctorNotFoundException {
-    	   Integer patientId = 1001;
-    	    Integer doctorId = 100;
+    	   Integer patientId = 1;
+    	    Integer doctorId = 1;
     	    LocalDate appointmentDate = LocalDate.of(2024, 11, 25);
     	    LocalDate dateOfBirth = LocalDate.of(2001, 7, 1);
-    	    LocalDate prefferedDate = LocalDate.of(2024, 11, 25);
-    	    Patient patient = new Patient(1001, "John Doe",dateOfBirth , "Male","7654321021", "Fever", "Routine Checkup", prefferedDate);
-    	    Doctor doctor = new Doctor(100, "Dr. Sharma", "Cardiology", 15, "MD", "Senior Consultant","Available");
+    	   
+    	    Patient patient = new Patient(1, "John Doe",dateOfBirth , "Male","7654321021");
+    	    Doctor doctor = new Doctor(1, "Dr. Sharma", "Cardiology", 15, "MD", "Senior Consultant","Available");
     	    
     	    when(doctorRepo.findById(doctorId)).thenReturn(Optional.of(doctor));
     	    when(patientRepo.findById(patientId)).thenReturn(Optional.of(patient));
     	    
     	    // Assuming the AppointmentDTO is updated to use patientId and doctorId
-    	    AppointmentDTO appointment = new AppointmentDTO(1, patientId, doctorId, appointmentDate, "10:00 AM", "Scheduled", "Regular Checkup");
+    	    AppointmentDTO appointment = new AppointmentDTO(2, patientId, doctorId, appointmentDate, "10:00 AM", "Scheduled", "Regular Checkup");
 
     	    // Assuming AppointmentDTO is converted to Appointment within the service layer
-    	    Appointment expectedAppointment = new Appointment(1, patient, doctor, appointmentDate, "10:00 AM", "Scheduled", "Regular Checkup");
+    	    Appointment expectedAppointment = new Appointment(2, patient, doctor, appointmentDate, "10:00 AM", "Scheduled", "Regular Checkup");
 
     	    // Mock the service to return an Appointment, not AppointmentDTO
     	    when(appointmentRepo.save(any(Appointment.class))).thenReturn(expectedAppointment);
@@ -86,13 +86,10 @@ class AppointmentServiceImplTest {
     @Test
     void testCancelAppointment() throws AppointmentNotFoundException {
         int appointmentId = 1;
-        Integer patientId = 1001;
-	    Integer doctorId = 100;
 	    LocalDate appointmentDate = LocalDate.of(2024, 11, 25);
 	    LocalDate dateOfBirth = LocalDate.of(2001, 7, 1);
-	    LocalDate prefferedDate = LocalDate.of(2024, 11, 25);
-	    Patient patient = new Patient(1001, "John Doe",dateOfBirth , "Male","7654321021", "Fever", "Routine Checkup", prefferedDate);
-	    Doctor doctor = new Doctor(100, "Dr. Sharma", "Cardiology", 15, "MD", "Senior Consultant","Available");
+	    Patient patient = new Patient(1, "John Doe",dateOfBirth , "Male","7654321021");
+	    Doctor doctor = new Doctor(1, "Dr. Sharma", "Cardiology", 15, "MD", "Senior Consultant","Available");
         Appointment appointment = new Appointment(1, patient, doctor, appointmentDate, "10:00 AM", "Scheduled", "Regular Checkup");
         when(appointmentRepo.save(any(Appointment.class))).thenReturn(new Appointment());
         when(appointmentRepo.findById(appointmentId)).thenReturn(Optional.of(appointment));

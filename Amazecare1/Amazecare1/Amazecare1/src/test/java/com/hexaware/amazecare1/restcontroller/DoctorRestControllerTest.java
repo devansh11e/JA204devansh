@@ -49,7 +49,7 @@ class DoctorRestControllerTest {
 
     @Test
     void testUpdateDoctor() {
-        int doctorId = 101;
+        int doctorId = 2;
 
         Doctor updatedDoctor = new Doctor();
         updatedDoctor.setDoctorId(doctorId);
@@ -73,7 +73,7 @@ class DoctorRestControllerTest {
 
     @Test
     void testGetDoctorById() {
-        int doctorId = 101;
+        int doctorId = 2;
 
         ResponseEntity<Doctor> response = restTemplate.getForEntity(
                 "http://localhost:8081/api/doctors/getDoctorbyid/" + doctorId, Doctor.class);
@@ -95,23 +95,11 @@ class DoctorRestControllerTest {
         assertTrue(doctors.size() > 0);
     }
 
-    @Test
-    void testDeleteDoctorById() {
-        int doctorId = 105;
-
-        restTemplate.delete("http://localhost:8081/api/doctors/deleteDoctorbyid/" + doctorId);
-
-        ResponseEntity<Doctor> response = restTemplate.getForEntity(
-                "http://localhost:8081/api/doctors/get/" + doctorId, Doctor.class);
-
-        Doctor doctor = response.getBody();
-
-        assertNull(doctor);
-    }
+   
 
     @Test
     void testGetByDoctorName() {
-        String doctorName = "Dr. John";
+        String doctorName = "Dr. Deepak Aggarwal";
 
         ResponseEntity<List> response = restTemplate.getForEntity(
                 "http://localhost:8081/api/doctors/getbyDoctorName/" + doctorName, List.class);

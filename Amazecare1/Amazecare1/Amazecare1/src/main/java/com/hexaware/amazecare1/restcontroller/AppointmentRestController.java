@@ -1,14 +1,18 @@
 package com.hexaware.amazecare1.restcontroller;
+import java.util.HashMap;
 /*
  * Author=Vinayak
  */
 import java.util.List;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,7 +31,7 @@ import com.hexaware.amazecare1.exceptions.PatientNotFoundException;
 import com.hexaware.amazecare1.service.IAppointmentService;
 
 import jakarta.validation.Valid;
-
+//@CrossOrigin("http://localhost:4200")
 @RestController
 @RequestMapping("/api/appointments")
 public class AppointmentRestController {
@@ -44,51 +48,60 @@ public class AppointmentRestController {
 	 public ResponseEntity<?> scheduleAppointment(@Valid @RequestBody AppointmentDTO appointmentDTO) throws PatientNotFoundException, DoctorNotFoundException {
 	        Appointment appointment = service.scheduleAppointment(appointmentDTO);
 	        return ResponseEntity.ok(appointment);
+	
 	    }
 	 
 	 
 
 	    // Get all appointments for a patient
-	    @GetMapping("/getappointmentbypatientid/{patientId}") 
-	    @PreAuthorize("hasAuthority('patient')")
-	    public ResponseEntity<?> findAppointmentByPatientId(@PathVariable Integer patientId) throws PatientNotFoundException {
-	        if (patientId == null) {
-	            return ResponseEntity.badRequest().body("Patient ID is required.");
+	    @GetMapping("/getappointmentbyid/{appointmentId}") 
+	    @PreAuthorize("hasAuthority('admin') or hasAuthority('doctor')")
+	    public ResponseEntity<?> findAppointmentByPatientId(@PathVariable Integer appointmentId) throws AppointmentNotFoundException {
+	        if (appointmentId == null) {
+	            return ResponseEntity.badRequest().body("Appointment ID is required.");
 	        }
 
-	        List<Appointment> appointment = service.findAppointmentByPatientId(patientId);
-
-	        if (appointment.isEmpty()) {
-	            throw new PatientNotFoundException("No Patient found for patient ID: " + patientId);
-	        }
+	        AppointmentDTO appointment = service.findAppointmentById(appointmentId);
 
 	        return ResponseEntity.ok(appointment);
 	    }
 			
-	    
-	    
-	    //Get all appointments for a Doctor
-	    @GetMapping("/getappointmentbydoctorid/{doctorId}") 
-	    @PreAuthorize("hasAuthority('doctor')")
-	    public ResponseEntity<?> findAppointmentByDoctorId(@PathVariable Integer doctorId) throws DoctorNotFoundException {
-	        if (doctorId == null) {
-	            return ResponseEntity.badRequest().body("Doctor ID is required.");
-	        }
-
-	        List<Appointment> appointment = service.findAppointmentByDoctorId(doctorId);
-
-	        if (appointment.isEmpty()) {
-	            throw new DoctorNotFoundException("No Doctor found for Doctor ID: " + doctorId);
-	        }
-
-	        return ResponseEntity.ok(appointment);
-	    }
+	   
 
 	    // Cancel an appointment
-	    @DeleteMapping("/cancelappointment/{appointmentId}")
-	    @PreAuthorize("hasAuthority('patient')")
+	    @PutMapping("/cancelappointment/{appointmentId}")
+	    @PreAuthorize("hasAuthority('admin')")
 	    public int cancelAppointment(@PathVariable int appointmentId) throws AppointmentNotFoundException {
 	        return service.cancelAppointment(appointmentId);
 	    }
+	    
+	    @PutMapping("/updateappointment/{appointmentId}")
+	    @PreAuthorize("hasAuthority('patient')")
+	    public  ResponseEntity<Map<String, String>> updateAppointment(@PathVariable int appointmentId,@RequestBody AppointmentDTO appointmentDTO) throws PatientNotFoundException, DoctorNotFoundException, AppointmentNotFoundException {
+	    	service.updateAppointment(appointmentId,appointmentDTO);
+	    	 Map<String, String> response = new HashMap<>();
+		        response.put("message", "Appointment Updated Successfully");
+
+		        return ResponseEntity.ok(response);
+	    }
+	    
+	    @GetMapping(value="/getallappointments",produces = "application/json")
+	    @PreAuthorize("hasAuthority('admin')")
+	    public ResponseEntity<List<AppointmentDTO>> viewAppointments() {
+	        List<AppointmentDTO> appointments = service.viewAppointments();
+	        return ResponseEntity.ok(appointments); // Return the list of AppointmentDTOs
+	    }
+	    
+	    
+	    @GetMapping("/byDoctor/{doctorId}")
+	    @PreAuthorize("hasAuthority('patient')")
+	    public ResponseEntity<List<AppointmentDTO>> getAppointmentsByDoctorId(@PathVariable Integer doctorId) throws DoctorNotFoundException {
+	        List<AppointmentDTO> appointments = service.findAppointmentByDoctor_DoctorId(doctorId);
+	        if (appointments.isEmpty()) {
+	            return ResponseEntity.noContent().build(); // Return 204 No Content if no appointments found
+	        }
+	        return ResponseEntity.ok(appointments);
+	    }
+	    
 	}
 

@@ -32,9 +32,9 @@ class PatientRestControllerTest {
 
 	@Test
 	void testInsertPatient() {
-		LocalDate prefferedDate = LocalDate.of(2024, 11, 25);
+		
 		LocalDate dateofbirth=LocalDate.of(2001, 7, 1);
-		Patient emp = new Patient(1,"sohini",dateofbirth,"female","7748049015","pcod","general",prefferedDate);
+		Patient emp = new Patient(1,"sohini",dateofbirth,"female","7748049015");
 		
 	ResponseEntity<Patient>  response =  
 			restTemplate.postForEntity("http://localhost:8081/api/patients/registerpatient", emp, Patient.class);
@@ -50,10 +50,10 @@ class PatientRestControllerTest {
 	@Test
 	void testUpdateEmployee() {
 	    int patientId = 1;
-	    LocalDate prefferedDate = LocalDate.of(2024, 11, 25);
+	   
 	    LocalDate dateofbirth=LocalDate.of(2001, 7, 1);
 	    // Create an updated Patient object with modified details
-	    Patient updatedPatient = new Patient(patientId, "Sohini Updated", dateofbirth, "female", "7748049015", "updated diagnosis", "general",prefferedDate);
+	    Patient updatedPatient = new Patient(patientId, "Sohini Updated", dateofbirth, "female", "7748049015");
 	    
 	    // Send PUT request to update the patient details
 	    restTemplate.put("http://localhost:8081/api/patients/updatepatient/" + patientId, updatedPatient);
@@ -81,17 +81,6 @@ class PatientRestControllerTest {
 
 		assertNotNull(emp);
 		assertEquals(1, emp.getPatientId());
-
-	}
-
-
-	@Test
-	void testDeleteById() {
-		
-						int patientId = 1;
-		
-						restTemplate.delete("http://localhost:8081/api/patients/deletePatientbyid/"+patientId);
-		
 
 	}
 

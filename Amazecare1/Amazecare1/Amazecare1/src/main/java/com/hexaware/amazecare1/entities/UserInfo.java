@@ -28,7 +28,7 @@ public class UserInfo {
 
     
     @Column(nullable = false)
-    @Pattern(regexp = "[A-Z][a-z]+",message = "Name must begin with Uppercase")
+    @Pattern(regexp = "[A-Z][a-z0-9]+",message = "Name must begin with Uppercase")
     @Size(min=0,max=20,message=" Name must be within desired limits")
     private String name; 
     
