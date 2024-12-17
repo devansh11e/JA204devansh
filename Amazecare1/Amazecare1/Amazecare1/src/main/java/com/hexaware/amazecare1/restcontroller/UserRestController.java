@@ -74,7 +74,7 @@ public class UserRestController {
 	}
 	 @GetMapping("/role")
 	    public String getUserRole(@RequestParam String username) {
-		 System.out.println("Received username: " + username); // Debugging
+		 logger.info("Received username: " + username); // Debugging
 	        return service.getUserRole(username);
 	    }
 	 @GetMapping("/check-username")

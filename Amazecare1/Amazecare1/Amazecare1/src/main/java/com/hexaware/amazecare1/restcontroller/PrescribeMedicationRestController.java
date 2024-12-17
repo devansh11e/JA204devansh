@@ -25,7 +25,7 @@ import com.hexaware.amazecare1.exceptions.PrescriptionNotFoundException;
 import com.hexaware.amazecare1.service.IPrescribeMedicationService;
 
 import jakarta.validation.Valid;
-@CrossOrigin("http://localhost:4200")
+//@CrossOrigin("http://localhost:4200")
 @RestController
 @RequestMapping("/api/prescribemedications")
 public class PrescribeMedicationRestController {
@@ -36,7 +36,7 @@ public class PrescribeMedicationRestController {
 	
 	
 	//Add Prescription
-	@PostMapping(value="/addPrescription",consumes = "application/json",produces = "application/json")
+	@PostMapping(value="/add-Prescription",consumes = "application/json",produces = "application/json")
 	@PreAuthorize("hasAuthority('doctor')")
 	public ResponseEntity<?> PrescribeMedications(@Valid @RequestBody PrescribeMedicationDTO prescribeDTO) throws PatientNotFoundException, DoctorNotFoundException {
 		PrescribeMedication pres=service.prescribeMedications(prescribeDTO);
@@ -44,7 +44,7 @@ public class PrescribeMedicationRestController {
 	
 	
 		//Get Prescription by ID
-		@GetMapping("/getPrescriptionbyid/{pid}") 
+		@GetMapping("/get-Prescription-by-id/{pid}") 
 		@PreAuthorize("hasAuthority('admin')")
 		public ResponseEntity<PrescribeMedicationDTO>   getPrescriptionById(@PathVariable int pid) throws PrescriptionNotFoundException {
 			
@@ -54,7 +54,7 @@ public class PrescribeMedicationRestController {
 	}
 		
 		//Get All Prescriptions
-		@GetMapping(value="/getallprescriptions",produces = "application/json")
+		@GetMapping(value="/get-all-prescriptions",produces = "application/json")
 		@PreAuthorize("hasAuthority('admin')")
 		public ResponseEntity<List<PrescribeMedicationDTO>> viewPrescriptions() {
 	        List<PrescribeMedicationDTO> prescriptions = service.viewAllPrescriptions();
@@ -63,7 +63,7 @@ public class PrescribeMedicationRestController {
 		
 		
 		//Get Prescription by Patient ID
-		@GetMapping("/getPrescriptionbypatientid/{patientId}") 
+		@GetMapping("/get-Prescription-by-patientid/{patientId}") 
 		@PreAuthorize("hasAuthority('patient')")
 		public ResponseEntity<?> findPrescriptionByPatientId(@PathVariable Integer patientId) throws PatientNotFoundException {
 	        if (patientId == null) {

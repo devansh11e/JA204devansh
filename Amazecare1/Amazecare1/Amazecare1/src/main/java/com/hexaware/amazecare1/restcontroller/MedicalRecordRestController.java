@@ -37,7 +37,7 @@ public class MedicalRecordRestController {
 	Logger logger =	   LoggerFactory.getLogger(MedicalRecordRestController.class);
 
 	//Adding Medical Record
-	@PostMapping(value="/addMedicalrecord",consumes = "application/json",produces = "application/json")
+	@PostMapping(value="/add-Medicalrecord",consumes = "application/json",produces = "application/json")
 	@PreAuthorize("hasAuthority('doctor')")
 	public ResponseEntity<?> conductConsultation(@Valid @RequestBody MedicalRecordDTO medicalDTO) throws AppointmentNotFoundException {
 		MedicalRecord med=service.conductConsultation(medicalDTO);
@@ -47,7 +47,7 @@ public class MedicalRecordRestController {
 	
 	
 	//Updating Medical Record By Record ID
-	@PutMapping("/updateMedicalRecord/{recordId}")
+	@PutMapping("/update-MedicalRecord/{recordId}")
 	@PreAuthorize("hasAuthority('doctor')")
 	public   ResponseEntity<Map<String, String>>  updateMedicalRecord(@PathVariable int recordId,@Valid @RequestBody MedicalRecordDTO medDTO) throws AppointmentNotFoundException, MedicalRecordNotFoundException {
 
@@ -59,7 +59,7 @@ public class MedicalRecordRestController {
 	
 	
 	//Get Record by ID
-	@GetMapping("/getRecordbyid/{rid}") 
+	@GetMapping("/get-Record-by-id/{rid}") 
 	@PreAuthorize("hasAuthority('doctor') ")
 	public ResponseEntity<MedicalRecordDTO>   getRecordById(@PathVariable int rid) throws MedicalRecordNotFoundException {
 		
@@ -70,7 +70,7 @@ public class MedicalRecordRestController {
 	
 	
 	//Get all Medical Record
-	@GetMapping(value="/getallMedicalRecord",produces = "application/json")
+	@GetMapping(value="/get-all-MedicalRecord",produces = "application/json")
 	@PreAuthorize(" hasAuthority('admin')")
 	public ResponseEntity<List<MedicalRecordDTO>> getAllMedicalRecords() {
         List<MedicalRecordDTO> records = service.viewMedicalHistory();
@@ -79,7 +79,7 @@ public class MedicalRecordRestController {
 	
 	
 	//Get Record by Diagnosis Name
-	@GetMapping("/getbydiagnosis/{diagnosis}")
+	@GetMapping("/get-by-diagnosis/{diagnosis}")
 	@PreAuthorize("hasAuthority('doctor')")
 	public ResponseEntity<List<MedicalRecordDTO>>  getByDiagnosis(@PathVariable String diagnosis) throws MedicalRecordNotFoundException{
 		

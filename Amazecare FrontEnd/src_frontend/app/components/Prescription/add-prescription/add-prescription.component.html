@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Prescription</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #6a1b9a, #2575fc);
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background-color: #343a40;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .navbar .nav-link {
+      color: #fff;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+    .navbar .nav-link:hover {
+      color: #1e88e5;
+    }
+    h1 {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+    .form-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .form-container .form-control {
+      background-color: #f3f3f3;
+      color: #000;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .form-container .btn-success {
+      background-color: #1e88e5;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .form-container .btn-success:hover {
+      background-color: #1565c0;
+    }
+    .form-container .error-message {
+      color: red;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm bg-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/doctor">Back To Dashboard</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Page Heading -->
+  <h1>Add Prescription</h1>
+
+  <!-- Add Prescription Form -->
+  <form #presForm="ngForm" class="container col-md-5" (ngSubmit)="addPrescription(presForm.value)">
+    
+    <!-- Patient ID -->
+    <div class="form-group">
+      <label for="patientId">Patient ID:</label>
+      <input type="number" class="form-control" required name="patientId" id="patientId" ngModel #patientIdControl="ngModel" />
+      <span *ngIf="patientIdControl.touched && patientIdControl.invalid">Patient ID is mandatory</span>
+    </div>
+
+    <!-- Doctor ID -->
+    <div class="form-group">
+      <label for="doctorId">Doctor ID:</label>
+      <input type="number" class="form-control" required name="doctorId" id="doctorId" ngModel #doctorIdControl="ngModel" />
+      <span *ngIf="doctorIdControl.touched && doctorIdControl.invalid">Doctor ID is mandatory</span>
+    </div>
+
+    <!-- Medication Name -->
+    <div class="form-group">
+      <label for="medicationName">Medication Name:</label>
+      <input type="text" class="form-control" required name="medicationName" id="medicationName" ngModel #medicationNameControl="ngModel" />
+      <span *ngIf="medicationNameControl.touched && medicationNameControl.invalid">Medication Name is mandatory</span>
+    </div>
+
+    <!-- Dosage -->
+    <div class="form-group">
+      <label for="dosage">Dosage:</label>
+      <input type="text" class="form-control" required name="dosage" id="dosage" ngModel #dosageControl="ngModel" />
+      <span *ngIf="dosageControl.touched && dosageControl.invalid">Dosage is mandatory</span>
+    </div>
+
+    <!-- Frequency -->
+    <div class="form-group">
+      <label for="frequency">Frequency:</label>
+      <input type="text" class="form-control" required name="frequency" id="frequency" ngModel #frequencyControl="ngModel" />
+      <span *ngIf="frequencyControl.touched && frequencyControl.invalid">Frequency is mandatory</span>
+    </div>
+
+    <!-- Duration -->
+    <div class="form-group">
+      <label for="duration">Duration:</label>
+      <input type="text" class="form-control" required name="duration" id="duration" ngModel #durationControl="ngModel" />
+      <span *ngIf="durationControl.touched && durationControl.invalid">Duration is mandatory</span>
+    </div>
+
+    <!-- Instruction -->
+    <div class="form-group">
+      <label for="instruction">Instruction:</label>
+      <input type="text" class="form-control" required name="instruction" id="instruction" ngModel #instructionControl="ngModel" />
+      <span *ngIf="instructionControl.touched && instructionControl.invalid">Instruction is mandatory</span>
+    </div>
+
+    <!-- Start Date -->
+    <div class="form-group">
+      <label for="startDate">Start Date:</label>
+      <input type="date" class="form-control" required name="startDate" id="startDate" ngModel #startDateControl="ngModel" />
+      <span *ngIf="startDateControl.touched && startDateControl.invalid">Start Date is mandatory</span>
+    </div>
+
+    <!-- End Date -->
+    <div class="form-group">
+      <label for="endDate">End Date:</label>
+      <input type="date" class="form-control" required name="endDate" id="endDate" ngModel #endDateControl="ngModel" />
+      <span *ngIf="endDateControl.touched && endDateControl.invalid">End Date is mandatory</span>
+    </div>
+
+    <!-- Quantity -->
+    <div class="form-group">
+      <label for="quantity">Quantity:</label>
+      <input type="number" class="form-control" required name="quantity" id="quantity" ngModel #quantityControl="ngModel" />
+      <span *ngIf="quantityControl.touched && quantityControl.invalid">Quantity is mandatory</span>
+    </div>
+
+    <!-- Submit Button -->
+    <div>
+      <button type="submit" class="btn btn-success" style="background-color: green;" [disabled]="presForm.invalid">Submit</button>
+    </div>
+  </form>
+
+</body>
+</html>

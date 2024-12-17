@@ -33,7 +33,7 @@ public class Doctor {
   private String qualification;
   @Size(min=0,max=20,message=" Designation must be within desired limits")
   private String designation;
-  @NotNull(message = "Available/Not Available is required")
+  @NotNull(message = "Day And Time is required")
   private String availability;
   
   public Doctor()

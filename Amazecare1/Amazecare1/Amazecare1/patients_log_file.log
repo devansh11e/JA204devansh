@@ -1,3 +1,13 @@
+[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZXZhbnNoIiwiaWF0IjoxNzM0MzczODAxLCJleHAiOjE3MzQzNzc0MDF9.LOLMJNIQc7JjfmfsNVNg5rXssejDP9iCtm-WfjuLbPg
+[INFO]  :  Received username: Devansh
+[INFO]  :  Recieved ID: 
+[INFO]  :  Recieved ID: 
+[INFO]  :  Recieved Name:
+[INFO]  :  Recieved Name:
+[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZXZhbnNoIiwiaWF0IjoxNzM0Mzc0MjUwLCJleHAiOjE3MzQzNzc4NTB9.8Nm2iSmqOITtpxi4E-IyUQDLw2ZTPqzt4lyMdoNntXg
+[INFO]  :  Received username: Devansh
+[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZWVwYWsiLCJpYXQiOjE3MzQzNzQ5NzQsImV4cCI6MTczNDM3ODU3NH0.rbBGznhf62_CawR_SLXXoij2qPsDcA3cn4pv-6t_3Ak
+[INFO]  :  Received username: Deepak
 [INFO]  :  Application shutdown requested.
 [INFO]  :  Stopping service [Tomcat]
 [INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
@@ -14,199 +24,10 @@
 [INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
 [INFO]  :  HikariPool-1 - Shutdown initiated...
 [INFO]  :  HikariPool-1 - Shutdown completed.
-[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 17180 (C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by devan in C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
+[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 16348 (C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by devan in C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
 [INFO]  :  No active profile set, falling back to 1 default profile: "default"
 [INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO]  :  Finished Spring Data repository scanning in 202 ms. Found 6 JPA repository interfaces.
-[INFO]  :  Tomcat initialized with port(s): 8081 (http)
-[INFO]  :  Starting service [Tomcat]
-[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
-[INFO]  :  Initializing Spring embedded WebApplicationContext
-[INFO]  :  Root WebApplicationContext: initialization completed in 3095 ms
-[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
-[INFO]  :  HHH000406: Using bytecode reflection optimizer
-[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
-[INFO]  :  HikariPool-1 - Starting...
-[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6550ce46
-[INFO]  :  HikariPool-1 - Start completed.
-[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO]  :  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6441da2c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61b11d35, org.springframework.security.web.context.SecurityContextHolderFilter@586a9fe1, org.springframework.security.web.header.HeaderWriterFilter@30be6a05, org.springframework.web.filter.CorsFilter@7c7d83ff, org.springframework.security.web.authentication.logout.LogoutFilter@365fde74, com.hexaware.amazecare1.filter.JwtAuthFilter@5af47414, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@20bc3e7f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75c0e6be, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b0df349, org.springframework.security.web.session.SessionManagementFilter@7ef570be, org.springframework.security.web.access.ExceptionTranslationFilter@592fbd8, org.springframework.security.web.access.intercept.AuthorizationFilter@7c046af]
-[INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
-[INFO]  :  Started AmazecareApplication in 10.528 seconds (process running for 12.089)
-[INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO]  :  Initializing Servlet 'dispatcherServlet'
-[INFO]  :  Completed initialization in 2 ms
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZXZhbnNoIiwiaWF0IjoxNzM0Mjg3ODcxLCJleHAiOjE3MzQyOTE0NzF9.CgDR0ETcyRSUE8yMsccCdMURtn45jUeRXZiyGdnrBlU
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJWaW5heWFrIiwiaWF0IjoxNzM0Mjg3OTkyLCJleHAiOjE3MzQyOTE1OTJ9.Ka-O709FWQpNperWVNt9O7bKtu1QMeAaQ1v2RPfsO2M
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEaW5lc2giLCJpYXQiOjE3MzQyOTAxNzMsImV4cCI6MTczNDI5Mzc3M30.CoZp6c8gGxq2J9aggCX0a129GFCCDXnvNZwfw51brP4
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZWVwYWsiLCJpYXQiOjE3MzQyOTAxOTYsImV4cCI6MTczNDI5Mzc5Nn0.kgcWHqbom7Haiv7RTvN-9rsdw-NkU1IecMJ780Qa8lc
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJWaW5heWFrIiwiaWF0IjoxNzM0MjkwNjc2LCJleHAiOjE3MzQyOTQyNzZ9.5RN2djrlW9UMbgZvP5pqTe1sGz8b3diWCGEaLvOZTms
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZXZhbnNoIiwiaWF0IjoxNzM0MjkwNzE1LCJleHAiOjE3MzQyOTQzMTV9.fyJNy91NeKEQUyCm9OTr3cFmFYnxlZHJX5i0UuO2Nm0
-[INFO]  :  Application shutdown requested.
-[INFO]  :  Stopping service [Tomcat]
-[INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
-[WARN]  :  The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base/jdk.internal.misc.Unsafe.park(Native Method)
- java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
- java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
- java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
- java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
- java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
- java.base/java.lang.Thread.run(Thread.java:1583)
-[INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO]  :  HikariPool-1 - Shutdown initiated...
-[INFO]  :  HikariPool-1 - Shutdown completed.
-[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 12648 (C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by devan in C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
-[INFO]  :  No active profile set, falling back to 1 default profile: "default"
-[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO]  :  Finished Spring Data repository scanning in 209 ms. Found 6 JPA repository interfaces.
-[INFO]  :  Tomcat initialized with port(s): 8081 (http)
-[INFO]  :  Starting service [Tomcat]
-[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
-[INFO]  :  Initializing Spring embedded WebApplicationContext
-[INFO]  :  Root WebApplicationContext: initialization completed in 5636 ms
-[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
-[INFO]  :  HHH000406: Using bytecode reflection optimizer
-[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
-[INFO]  :  HikariPool-1 - Starting...
-[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@120d6cbf
-[INFO]  :  HikariPool-1 - Start completed.
-[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO]  :  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6d0cc47d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56dae6, org.springframework.security.web.context.SecurityContextHolderFilter@2afa1b1a, org.springframework.security.web.header.HeaderWriterFilter@41c05747, org.springframework.web.filter.CorsFilter@57fe6f2d, org.springframework.security.web.authentication.logout.LogoutFilter@3e866323, com.hexaware.amazecare1.filter.JwtAuthFilter@72155315, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@738b93a8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64547a83, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e43c01f, org.springframework.security.web.session.SessionManagementFilter@7a4c1a6c, org.springframework.security.web.access.ExceptionTranslationFilter@27558dee, org.springframework.security.web.access.intercept.AuthorizationFilter@5397d41e]
-[INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
-[INFO]  :  Started AmazecareApplication in 16.278 seconds (process running for 18.816)
-[INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO]  :  Initializing Servlet 'dispatcherServlet'
-[INFO]  :  Completed initialization in 106 ms
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZXZhbnNoIiwiaWF0IjoxNzM0MzI0MDkzLCJleHAiOjE3MzQzMjc2OTN9.ggbMZI_f6hL2YtZyS2tEOl2-_0k3aRVtPF6pAMTTf3s
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZXZhbnNoIiwiaWF0IjoxNzM0MzI0MzIxLCJleHAiOjE3MzQzMjc5MjF9.oIvmsAZz-byNxTh4MUZpX4If0kIGVUqfyXcExsFvt20
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZWVwYWsiLCJpYXQiOjE3MzQzMjQ0OTEsImV4cCI6MTczNDMyODA5MX0.K-Mivm5dtJTTwjT_41WpoRMn-H-K-46ZjLdvBmsz6Nc
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJWaW5heWFrIiwiaWF0IjoxNzM0MzI0ODA4LCJleHAiOjE3MzQzMjg0MDh9.iqH7xyOwYL8a-OdPYsEnViBzVj2Po-F4pWpL7_l9aLg
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJWaW5heWFrIiwiaWF0IjoxNzM0MzI1NDgxLCJleHAiOjE3MzQzMjkwODF9.DmcbqTkZvPZYRloiTQa3zzoKfcjAuHtSGgHtbO89bTc
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZXZhbnNoIiwiaWF0IjoxNzM0MzI1NzM0LCJleHAiOjE3MzQzMjkzMzR9.PiNzXx0m4oG5XtTYIMCGZKuUM6P0ofPwEG0IMKNl9gU
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZXZhbnNoIiwiaWF0IjoxNzM0MzI3NDMwLCJleHAiOjE3MzQzMzEwMzB9.-qsVtbqdXUx_qAQalt8g8PENDD70SVFcmpROY3ftZ1Q
-[INFO]  :  Application shutdown requested.
-[INFO]  :  Stopping service [Tomcat]
-[INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
-[WARN]  :  The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base/jdk.internal.misc.Unsafe.park(Native Method)
- java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
- java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
- java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
- java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
- java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
- java.base/java.lang.Thread.run(Thread.java:1583)
-[INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO]  :  HikariPool-1 - Shutdown initiated...
-[INFO]  :  HikariPool-1 - Shutdown completed.
-[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 17164 (C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by devan in C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
-[INFO]  :  No active profile set, falling back to 1 default profile: "default"
-[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO]  :  Finished Spring Data repository scanning in 122 ms. Found 6 JPA repository interfaces.
-[INFO]  :  Tomcat initialized with port(s): 8081 (http)
-[INFO]  :  Starting service [Tomcat]
-[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
-[INFO]  :  Initializing Spring embedded WebApplicationContext
-[INFO]  :  Root WebApplicationContext: initialization completed in 2545 ms
-[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
-[INFO]  :  HHH000406: Using bytecode reflection optimizer
-[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
-[INFO]  :  HikariPool-1 - Starting...
-[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@248b2b61
-[INFO]  :  HikariPool-1 - Start completed.
-[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO]  :  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5d00241b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@365fde74, org.springframework.security.web.context.SecurityContextHolderFilter@354baab2, org.springframework.security.web.header.HeaderWriterFilter@28d74041, org.springframework.web.filter.CorsFilter@760b9444, org.springframework.security.web.authentication.logout.LogoutFilter@6db64abf, com.hexaware.amazecare1.filter.JwtAuthFilter@2dc72c0c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6812708d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@123a21ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5397d41e, org.springframework.security.web.session.SessionManagementFilter@e417628, org.springframework.security.web.access.ExceptionTranslationFilter@721f3526, org.springframework.security.web.access.intercept.AuthorizationFilter@2f98859a]
-[INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
-[INFO]  :  Started AmazecareApplication in 8.218 seconds (process running for 9.484)
-[INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO]  :  Initializing Servlet 'dispatcherServlet'
-[INFO]  :  Completed initialization in 3 ms
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZXZhbnNoIiwiaWF0IjoxNzM0MzMwNjg2LCJleHAiOjE3MzQzMzQyODZ9.-ahQJFcT9PVcFTROSy_tT0YE0JaDKSNTsVha-uD7haU
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZXZhbnNoMTIiLCJpYXQiOjE3MzQzMzA3NjYsImV4cCI6MTczNDMzNDM2Nn0.uLZi1Dl-RJE1NWtkdulnjuvIg-wPeeqRncPl2mFcOH4
-[INFO]  :  Application shutdown requested.
-[INFO]  :  Stopping service [Tomcat]
-[INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
-[WARN]  :  The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base/jdk.internal.misc.Unsafe.park(Native Method)
- java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
- java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
- java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
- java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
- java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
- java.base/java.lang.Thread.run(Thread.java:1583)
-[INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO]  :  HikariPool-1 - Shutdown initiated...
-[INFO]  :  HikariPool-1 - Shutdown completed.
-[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 19544 (C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by devan in C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
-[INFO]  :  No active profile set, falling back to 1 default profile: "default"
-[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO]  :  Finished Spring Data repository scanning in 290 ms. Found 6 JPA repository interfaces.
-[INFO]  :  Tomcat initialized with port(s): 8081 (http)
-[INFO]  :  Starting service [Tomcat]
-[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
-[INFO]  :  Initializing Spring embedded WebApplicationContext
-[INFO]  :  Root WebApplicationContext: initialization completed in 3287 ms
-[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
-[INFO]  :  HHH000406: Using bytecode reflection optimizer
-[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
-[INFO]  :  HikariPool-1 - Starting...
-[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c79c5ec
-[INFO]  :  HikariPool-1 - Start completed.
-[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO]  :  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@30ae3c46, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3dbcde0b, org.springframework.security.web.context.SecurityContextHolderFilter@48900d4a, org.springframework.security.web.header.HeaderWriterFilter@6e2764c9, org.springframework.web.filter.CorsFilter@5c168f98, org.springframework.security.web.authentication.logout.LogoutFilter@4f0381cd, com.hexaware.amazecare1.filter.JwtAuthFilter@6894436e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@452ea8f0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46f3d0f7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f98859a, org.springframework.security.web.session.SessionManagementFilter@41c05747, org.springframework.security.web.access.ExceptionTranslationFilter@39d4f046, org.springframework.security.web.access.intercept.AuthorizationFilter@3e866323]
-[INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
-[INFO]  :  Started AmazecareApplication in 12.643 seconds (process running for 13.931)
-[INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO]  :  Initializing Servlet 'dispatcherServlet'
-[INFO]  :  Completed initialization in 8 ms
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZXZhbnNoMTIiLCJpYXQiOjE3MzQzMzM4NjMsImV4cCI6MTczNDMzNzQ2M30.RNBKnz-InvjbFgD2ICi-gJxwy9swuMi-d1vnd6ZtC2Y
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZXZhbnNoMTIiLCJpYXQiOjE3MzQzMzQyMzMsImV4cCI6MTczNDMzNzgzM30.Nmq394KwtZUrh-Wfqzcm0uaMCm2sAQBePA0m_O9qae0
-[INFO]  :  Application shutdown requested.
-[INFO]  :  Stopping service [Tomcat]
-[INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
-[WARN]  :  The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base/jdk.internal.misc.Unsafe.park(Native Method)
- java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
- java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
- java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
- java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
- java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
- java.base/java.lang.Thread.run(Thread.java:1583)
-[INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO]  :  HikariPool-1 - Shutdown initiated...
-[INFO]  :  HikariPool-1 - Shutdown completed.
-[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 16128 (C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by devan in C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
-[INFO]  :  No active profile set, falling back to 1 default profile: "default"
-[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO]  :  Finished Spring Data repository scanning in 199 ms. Found 6 JPA repository interfaces.
+[INFO]  :  Finished Spring Data repository scanning in 217 ms. Found 6 JPA repository interfaces.
 [INFO]  :  Tomcat initialized with port(s): 8081 (http)
 [INFO]  :  Starting service [Tomcat]
 [INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
@@ -217,20 +38,21 @@
 [INFO]  :  HHH000406: Using bytecode reflection optimizer
 [INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
 [INFO]  :  HikariPool-1 - Starting...
-[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7be7c052
+[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70169464
 [INFO]  :  HikariPool-1 - Start completed.
 [WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
 [WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
 [INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 [INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
 [WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO]  :  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@42516ce2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74e111a8, org.springframework.security.web.context.SecurityContextHolderFilter@52d68eb9, org.springframework.security.web.header.HeaderWriterFilter@2c914364, org.springframework.web.filter.CorsFilter@6e6ec9c, org.springframework.security.web.authentication.logout.LogoutFilter@30fffb53, com.hexaware.amazecare1.filter.JwtAuthFilter@5935eb9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ab959e8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f910283, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7aecff85, org.springframework.security.web.session.SessionManagementFilter@54e39504, org.springframework.security.web.access.ExceptionTranslationFilter@78977b59, org.springframework.security.web.access.intercept.AuthorizationFilter@7959fbe3]
+[INFO]  :  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@56dae6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57fe6f2d, org.springframework.security.web.context.SecurityContextHolderFilter@30fffb53, org.springframework.security.web.header.HeaderWriterFilter@64455184, org.springframework.web.filter.CorsFilter@6e43c01f, org.springframework.security.web.authentication.logout.LogoutFilter@73624529, com.hexaware.amazecare1.filter.JwtAuthFilter@2cbae0f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e8c9083, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b3e2039, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6567de86, org.springframework.security.web.session.SessionManagementFilter@123a21ad, org.springframework.security.web.access.ExceptionTranslationFilter@6108c962, org.springframework.security.web.access.intercept.AuthorizationFilter@f6b128b]
 [INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
-[INFO]  :  Started AmazecareApplication in 12.437 seconds (process running for 14.239)
+[INFO]  :  Started AmazecareApplication in 12.018 seconds (process running for 13.832)
 [INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
 [INFO]  :  Initializing Servlet 'dispatcherServlet'
-[INFO]  :  Completed initialization in 8 ms
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZXZhbnNoIiwiaWF0IjoxNzM0MzM5OTk0LCJleHAiOjE3MzQzNDM1OTR9.vRkXBx1BmHUH8t9V9aY8rIRC4l3EQlFTOQWlkjn07ec
+[INFO]  :  Completed initialization in 7 ms
+[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJWaW5heWFrIiwiaWF0IjoxNzM0Mzc1NDI1LCJleHAiOjE3MzQzNzkwMjV9.T-mKUexwLDAmeGipDeLT0WHkvVRRh1sIlFdXKdLQeZk
+[INFO]  :  Received username: Vinayak
 [INFO]  :  Application shutdown requested.
 [INFO]  :  Stopping service [Tomcat]
 [INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
@@ -247,375 +69,27 @@
 [INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
 [INFO]  :  HikariPool-1 - Shutdown initiated...
 [INFO]  :  HikariPool-1 - Shutdown completed.
-[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 616 (C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by devan in C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
+[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 10688 (C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by devan in C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
 [INFO]  :  No active profile set, falling back to 1 default profile: "default"
 [INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO]  :  Finished Spring Data repository scanning in 189 ms. Found 6 JPA repository interfaces.
+[INFO]  :  Finished Spring Data repository scanning in 123 ms. Found 6 JPA repository interfaces.
 [INFO]  :  Tomcat initialized with port(s): 8081 (http)
 [INFO]  :  Starting service [Tomcat]
 [INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
 [INFO]  :  Initializing Spring embedded WebApplicationContext
-[INFO]  :  Root WebApplicationContext: initialization completed in 3576 ms
+[INFO]  :  Root WebApplicationContext: initialization completed in 2541 ms
 [INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
 [INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
 [INFO]  :  HHH000406: Using bytecode reflection optimizer
 [INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
 [INFO]  :  HikariPool-1 - Starting...
-[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64ed18ec
+[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@590dea35
 [INFO]  :  HikariPool-1 - Start completed.
 [WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
 [WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
 [INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 [INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
 [WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO]  :  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7018636a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e866323, org.springframework.security.web.context.SecurityContextHolderFilter@6108c962, org.springframework.security.web.header.HeaderWriterFilter@1a557a52, org.springframework.web.filter.CorsFilter@73624529, org.springframework.security.web.authentication.logout.LogoutFilter@74e111a8, com.hexaware.amazecare1.filter.JwtAuthFilter@356cb230, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64455184, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48900d4a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31e1c7c, org.springframework.security.web.session.SessionManagementFilter@5cbf9aee, org.springframework.security.web.access.ExceptionTranslationFilter@13ac1657, org.springframework.security.web.access.intercept.AuthorizationFilter@49a0fe14]
+[INFO]  :  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7c046af, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c883b3f, org.springframework.security.web.context.SecurityContextHolderFilter@7ef570be, org.springframework.security.web.header.HeaderWriterFilter@46f3d0f7, org.springframework.web.filter.CorsFilter@a47a011, org.springframework.security.web.authentication.logout.LogoutFilter@6e95c023, com.hexaware.amazecare1.filter.JwtAuthFilter@2e9f5499, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@63574d76, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@dcf64d2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6441da2c, org.springframework.security.web.session.SessionManagementFilter@64547a83, org.springframework.security.web.access.ExceptionTranslationFilter@452ea8f0, org.springframework.security.web.access.intercept.AuthorizationFilter@6567de86]
 [INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
-[INFO]  :  Started AmazecareApplication in 13.608 seconds (process running for 15.428)
-[INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO]  :  Initializing Servlet 'dispatcherServlet'
-[INFO]  :  Completed initialization in 0 ms
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZXZhbnNoIiwiaWF0IjoxNzM0MzQxMzA0LCJleHAiOjE3MzQzNDQ5MDR9.y79qDleLhPBRxhvftGv0ANFaYZA9ahucuJHHec2QnOY
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJWaW5heWFrIiwiaWF0IjoxNzM0MzQxMzMwLCJleHAiOjE3MzQzNDQ5MzB9.bhdW8RCba8zm71NowVzLN38I_1ijGn5DiK3_040v6LY
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJEZWVwYWsiLCJpYXQiOjE3MzQzNDEzODgsImV4cCI6MTczNDM0NDk4OH0.qZNKgbj-YP0pg8wePxzjrebPSvEiR474XcB_pV3UsI0
-[INFO]  :  Token : eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJWaW5heWFrIiwiaWF0IjoxNzM0MzQxNTA4LCJleHAiOjE3MzQzNDUxMDh9.Qwt2Qr2JjyN_B85bsE32ppG3beZU0mHhMO6jBXAjW60
-[INFO]  :  Application shutdown requested.
-[INFO]  :  Stopping service [Tomcat]
-[INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
-[WARN]  :  The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base/jdk.internal.misc.Unsafe.park(Native Method)
- java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
- java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
- java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
- java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
- java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
- java.base/java.lang.Thread.run(Thread.java:1583)
-[INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO]  :  HikariPool-1 - Shutdown initiated...
-[INFO]  :  HikariPool-1 - Shutdown completed.
-[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 15724 (C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by devan in C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
-[INFO]  :  No active profile set, falling back to 1 default profile: "default"
-[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO]  :  Finished Spring Data repository scanning in 174 ms. Found 6 JPA repository interfaces.
-[INFO]  :  Tomcat initialized with port(s): 8081 (http)
-[INFO]  :  Starting service [Tomcat]
-[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
-[INFO]  :  Initializing Spring embedded WebApplicationContext
-[INFO]  :  Root WebApplicationContext: initialization completed in 3287 ms
-[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
-[INFO]  :  HHH000406: Using bytecode reflection optimizer
-[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
-[INFO]  :  HikariPool-1 - Starting...
-[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1115be8c
-[INFO]  :  HikariPool-1 - Start completed.
-[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO]  :  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6e43c01f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6567de86, org.springframework.security.web.context.SecurityContextHolderFilter@1e8c9083, org.springframework.security.web.header.HeaderWriterFilter@48900d4a, org.springframework.web.filter.CorsFilter@5350a926, org.springframework.security.web.authentication.logout.LogoutFilter@30ae3c46, com.hexaware.amazecare1.filter.JwtAuthFilter@3bf4b018, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b3e2039, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ef570be, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77732366, org.springframework.security.web.session.SessionManagementFilter@2afa1b1a, org.springframework.security.web.access.ExceptionTranslationFilter@64455184, org.springframework.security.web.access.intercept.AuthorizationFilter@6d0cc47d]
-[INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
-[INFO]  :  Started AmazecareApplication in 11.982 seconds (process running for 13.607)
-[INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO]  :  Initializing Servlet 'dispatcherServlet'
-[INFO]  :  Completed initialization in 0 ms
-[INFO]  :  Application shutdown requested.
-[INFO]  :  Stopping service [Tomcat]
-[INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
-[WARN]  :  The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base/jdk.internal.misc.Unsafe.park(Native Method)
- java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
- java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
- java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
- java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
- java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
- java.base/java.lang.Thread.run(Thread.java:1583)
-[INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO]  :  HikariPool-1 - Shutdown initiated...
-[INFO]  :  HikariPool-1 - Shutdown completed.
-[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 20096 (C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by devan in C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
-[INFO]  :  No active profile set, falling back to 1 default profile: "default"
-[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 13392 (C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by devan in C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
-[INFO]  :  No active profile set, falling back to 1 default profile: "default"
-[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO]  :  Finished Spring Data repository scanning in 89 ms. Found 6 JPA repository interfaces.
-[INFO]  :  Finished Spring Data repository scanning in 103 ms. Found 6 JPA repository interfaces.
-[INFO]  :  Tomcat initialized with port(s): 8081 (http)
-[INFO]  :  Starting service [Tomcat]
-[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
-[INFO]  :  Tomcat initialized with port(s): 8081 (http)
-[INFO]  :  Starting service [Tomcat]
-[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
-[INFO]  :  Initializing Spring embedded WebApplicationContext
-[INFO]  :  Root WebApplicationContext: initialization completed in 2814 ms
-[INFO]  :  Initializing Spring embedded WebApplicationContext
-[INFO]  :  Root WebApplicationContext: initialization completed in 2862 ms
-[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
-[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
-[INFO]  :  HHH000406: Using bytecode reflection optimizer
-[INFO]  :  HHH000406: Using bytecode reflection optimizer
-[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
-[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
-[INFO]  :  HikariPool-1 - Starting...
-[INFO]  :  HikariPool-1 - Starting...
-[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c66ddab
-[INFO]  :  HikariPool-1 - Start completed.
-[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63b4b9c6
-[INFO]  :  HikariPool-1 - Start completed.
-[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
-[INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO]  :  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7f72855d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13f358f8, org.springframework.security.web.context.SecurityContextHolderFilter@c2ddfeb, org.springframework.security.web.header.HeaderWriterFilter@5257123d, org.springframework.web.filter.CorsFilter@3f119b55, org.springframework.security.web.authentication.logout.LogoutFilter@6eeb15f9, com.hexaware.amazecare1.filter.JwtAuthFilter@6d6ddeb5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7695184b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b89515b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64dcfd09, org.springframework.security.web.session.SessionManagementFilter@6e2e11ee, org.springframework.security.web.access.ExceptionTranslationFilter@75c095a5, org.springframework.security.web.access.intercept.AuthorizationFilter@5c960f64]
-[INFO]  :  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2f307fcc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3aec2f59, org.springframework.security.web.context.SecurityContextHolderFilter@189f9f9f, org.springframework.security.web.header.HeaderWriterFilter@75c095a5, org.springframework.web.filter.CorsFilter@7f72855d, org.springframework.security.web.authentication.logout.LogoutFilter@64864875, com.hexaware.amazecare1.filter.JwtAuthFilter@6fc1a1d5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c2ddfeb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7695184b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13f358f8, org.springframework.security.web.session.SessionManagementFilter@a6924ad, org.springframework.security.web.access.ExceptionTranslationFilter@6a0a0f12, org.springframework.security.web.access.intercept.AuthorizationFilter@42eaf47f]
-[INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
-[INFO]  :  Started AmazecareApplication in 9.51 seconds (process running for 11.708)
-[WARN]  :  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-[INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO]  :  HikariPool-1 - Shutdown initiated...
-[INFO]  :  HikariPool-1 - Shutdown completed.
-[INFO]  :  Stopping service [Tomcat]
-[INFO]  :  
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-[ERROR]  :  
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8081 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
-
-[INFO]  :  Application shutdown requested.
-[INFO]  :  Stopping service [Tomcat]
-[WARN]  :  The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base/jdk.internal.misc.Unsafe.park(Native Method)
- java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
- java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
- java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
- java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
- java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
- java.base/java.lang.Thread.run(Thread.java:1583)
-[INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO]  :  HikariPool-1 - Shutdown initiated...
-[INFO]  :  HikariPool-1 - Shutdown completed.
-[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 10012 (C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by devan in C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
-[INFO]  :  No active profile set, falling back to 1 default profile: "default"
-[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO]  :  Finished Spring Data repository scanning in 94 ms. Found 6 JPA repository interfaces.
-[INFO]  :  Tomcat initialized with port(s): 8081 (http)
-[INFO]  :  Starting service [Tomcat]
-[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
-[INFO]  :  Initializing Spring embedded WebApplicationContext
-[INFO]  :  Root WebApplicationContext: initialization completed in 1930 ms
-[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
-[INFO]  :  HHH000406: Using bytecode reflection optimizer
-[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
-[INFO]  :  HikariPool-1 - Starting...
-[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@299a43d9
-[INFO]  :  HikariPool-1 - Start completed.
-[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO]  :  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2f307fcc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3aec2f59, org.springframework.security.web.context.SecurityContextHolderFilter@189f9f9f, org.springframework.security.web.header.HeaderWriterFilter@75c095a5, org.springframework.web.filter.CorsFilter@7f72855d, org.springframework.security.web.authentication.logout.LogoutFilter@64864875, com.hexaware.amazecare1.filter.JwtAuthFilter@81a56b2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c2ddfeb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7695184b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13f358f8, org.springframework.security.web.session.SessionManagementFilter@a6924ad, org.springframework.security.web.access.ExceptionTranslationFilter@6a0a0f12, org.springframework.security.web.access.intercept.AuthorizationFilter@42eaf47f]
-[INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
-[INFO]  :  Started AmazecareApplication in 6.616 seconds (process running for 7.587)
-[INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO]  :  Initializing Servlet 'dispatcherServlet'
-[INFO]  :  Completed initialization in 2 ms
-[INFO]  :  Application shutdown requested.
-[INFO]  :  Stopping service [Tomcat]
-[INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
-[WARN]  :  The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base/jdk.internal.misc.Unsafe.park(Native Method)
- java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
- java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
- java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
- java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
- java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
- java.base/java.lang.Thread.run(Thread.java:1583)
-[INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO]  :  HikariPool-1 - Shutdown initiated...
-[INFO]  :  HikariPool-1 - Shutdown completed.
-[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 16900 (C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by devan in C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
-[INFO]  :  No active profile set, falling back to 1 default profile: "default"
-[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO]  :  Finished Spring Data repository scanning in 94 ms. Found 6 JPA repository interfaces.
-[INFO]  :  Tomcat initialized with port(s): 8081 (http)
-[INFO]  :  Starting service [Tomcat]
-[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
-[INFO]  :  Initializing Spring embedded WebApplicationContext
-[INFO]  :  Root WebApplicationContext: initialization completed in 1983 ms
-[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
-[INFO]  :  HHH000406: Using bytecode reflection optimizer
-[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
-[INFO]  :  HikariPool-1 - Starting...
-[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ca5cb99
-[INFO]  :  HikariPool-1 - Start completed.
-[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO]  :  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@57fe6f2d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e43c01f, org.springframework.security.web.context.SecurityContextHolderFilter@738b93a8, org.springframework.security.web.header.HeaderWriterFilter@6f749a1f, org.springframework.web.filter.CorsFilter@6567de86, org.springframework.security.web.authentication.logout.LogoutFilter@31e1c7c, com.hexaware.amazecare1.filter.JwtAuthFilter@2cbae0f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64547a83, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@487f025, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5350a926, org.springframework.security.web.session.SessionManagementFilter@51179fad, org.springframework.security.web.access.ExceptionTranslationFilter@41c05747, org.springframework.security.web.access.intercept.AuthorizationFilter@470fc16c]
-[INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
-[INFO]  :  Started AmazecareApplication in 6.871 seconds (process running for 8.049)
-[INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO]  :  Initializing Servlet 'dispatcherServlet'
-[INFO]  :  Completed initialization in 5 ms
-[INFO]  :  Application shutdown requested.
-[INFO]  :  Stopping service [Tomcat]
-[INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
-[WARN]  :  The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base/jdk.internal.misc.Unsafe.park(Native Method)
- java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
- java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
- java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
- java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
- java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
- java.base/java.lang.Thread.run(Thread.java:1583)
-[INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO]  :  HikariPool-1 - Shutdown initiated...
-[INFO]  :  HikariPool-1 - Shutdown completed.
-[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 17144 (C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by devan in C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
-[INFO]  :  No active profile set, falling back to 1 default profile: "default"
-[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO]  :  Finished Spring Data repository scanning in 110 ms. Found 6 JPA repository interfaces.
-[INFO]  :  Tomcat initialized with port(s): 8081 (http)
-[INFO]  :  Starting service [Tomcat]
-[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
-[INFO]  :  Initializing Spring embedded WebApplicationContext
-[INFO]  :  Root WebApplicationContext: initialization completed in 2166 ms
-[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
-[INFO]  :  HHH000406: Using bytecode reflection optimizer
-[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
-[INFO]  :  HikariPool-1 - Starting...
-[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5bbf744b
-[INFO]  :  HikariPool-1 - Start completed.
-[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO]  :  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4ed7db72, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7018636a, org.springframework.security.web.context.SecurityContextHolderFilter@27558dee, org.springframework.security.web.header.HeaderWriterFilter@52d68eb9, org.springframework.web.filter.CorsFilter@3e866323, org.springframework.security.web.authentication.logout.LogoutFilter@42516ce2, com.hexaware.amazecare1.filter.JwtAuthFilter@8b71052, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41c05747, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f749a1f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@73624529, org.springframework.security.web.session.SessionManagementFilter@5702232d, org.springframework.security.web.access.ExceptionTranslationFilter@2bdf6c7c, org.springframework.security.web.access.intercept.AuthorizationFilter@34714012]
-[INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
-[INFO]  :  Started AmazecareApplication in 8.337 seconds (process running for 9.33)
-[INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO]  :  Initializing Servlet 'dispatcherServlet'
-[INFO]  :  Completed initialization in 2 ms
-[INFO]  :  Application shutdown requested.
-[INFO]  :  Stopping service [Tomcat]
-[INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
-[WARN]  :  The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base/jdk.internal.misc.Unsafe.park(Native Method)
- java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
- java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
- java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
- java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
- java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
- java.base/java.lang.Thread.run(Thread.java:1583)
-[INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO]  :  HikariPool-1 - Shutdown initiated...
-[INFO]  :  HikariPool-1 - Shutdown completed.
-[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 7768 (C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by devan in C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
-[INFO]  :  No active profile set, falling back to 1 default profile: "default"
-[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO]  :  Finished Spring Data repository scanning in 124 ms. Found 6 JPA repository interfaces.
-[INFO]  :  Tomcat initialized with port(s): 8081 (http)
-[INFO]  :  Starting service [Tomcat]
-[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
-[INFO]  :  Initializing Spring embedded WebApplicationContext
-[INFO]  :  Root WebApplicationContext: initialization completed in 2095 ms
-[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
-[INFO]  :  HHH000406: Using bytecode reflection optimizer
-[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
-[INFO]  :  HikariPool-1 - Starting...
-[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34eaf9c1
-[INFO]  :  HikariPool-1 - Start completed.
-[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO]  :  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3582077c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d00241b, org.springframework.security.web.context.SecurityContextHolderFilter@592fbd8, org.springframework.security.web.header.HeaderWriterFilter@149fab7f, org.springframework.web.filter.CorsFilter@365fde74, org.springframework.security.web.authentication.logout.LogoutFilter@60f70c9e, com.hexaware.amazecare1.filter.JwtAuthFilter@8b71052, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30be6a05, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7a4c1a6c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@760b9444, org.springframework.security.web.session.SessionManagementFilter@452ea8f0, org.springframework.security.web.access.ExceptionTranslationFilter@274b0c2a, org.springframework.security.web.access.intercept.AuthorizationFilter@5c168f98]
-[INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
-[INFO]  :  Started AmazecareApplication in 7.213 seconds (process running for 8.363)
-[INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO]  :  Initializing Servlet 'dispatcherServlet'
-[INFO]  :  Completed initialization in 1 ms
-[INFO]  :  Application shutdown requested.
-[INFO]  :  Stopping service [Tomcat]
-[INFO]  :  Destroying Spring FrameworkServlet 'dispatcherServlet'
-[WARN]  :  The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base/jdk.internal.misc.Unsafe.park(Native Method)
- java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
- java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
- java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
- java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
- java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
- java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
- java.base/java.lang.Thread.run(Thread.java:1583)
-[INFO]  :  Closing JPA EntityManagerFactory for persistence unit 'default'
-[INFO]  :  HikariPool-1 - Shutdown initiated...
-[INFO]  :  HikariPool-1 - Shutdown completed.
-[INFO]  :  Starting AmazecareApplication using Java 21.0.4 with PID 16592 (C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1\target\classes started by devan in C:\Users\devan\OneDrive\Desktop\JA204devansh\Amazecare1\Amazecare1\Amazecare1)
-[INFO]  :  No active profile set, falling back to 1 default profile: "default"
-[INFO]  :  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO]  :  Finished Spring Data repository scanning in 128 ms. Found 6 JPA repository interfaces.
-[INFO]  :  Tomcat initialized with port(s): 8081 (http)
-[INFO]  :  Starting service [Tomcat]
-[INFO]  :  Starting Servlet engine: [Apache Tomcat/10.1.18]
-[INFO]  :  Initializing Spring embedded WebApplicationContext
-[INFO]  :  Root WebApplicationContext: initialization completed in 2119 ms
-[INFO]  :  HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO]  :  HHH000412: Hibernate ORM core version 6.2.20.Final
-[INFO]  :  HHH000406: Using bytecode reflection optimizer
-[INFO]  :  No LoadTimeWeaver setup: ignoring JPA class transformer
-[INFO]  :  HikariPool-1 - Starting...
-[INFO]  :  HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c79c5ec
-[INFO]  :  HikariPool-1 - Start completed.
-[WARN]  :  HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-[WARN]  :  HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-[INFO]  :  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[INFO]  :  Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN]  :  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO]  :  Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3e866323, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73624529, org.springframework.security.web.context.SecurityContextHolderFilter@41c05747, org.springframework.security.web.header.HeaderWriterFilter@4ab959e8, org.springframework.web.filter.CorsFilter@31e1c7c, org.springframework.security.web.authentication.logout.LogoutFilter@6e6ec9c, com.hexaware.amazecare1.filter.JwtAuthFilter@6894436e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f749a1f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ba90170, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30ae3c46, org.springframework.security.web.session.SessionManagementFilter@35920655, org.springframework.security.web.access.ExceptionTranslationFilter@52d68eb9, org.springframework.security.web.access.intercept.AuthorizationFilter@11eb8842]
-[INFO]  :  Tomcat started on port(s): 8081 (http) with context path ''
-[INFO]  :  Started AmazecareApplication in 7.297 seconds (process running for 8.323)
-[INFO]  :  Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO]  :  Initializing Servlet 'dispatcherServlet'
-[INFO]  :  Completed initialization in 1 ms
+[INFO]  :  Started AmazecareApplication in 8.085 seconds (process running for 9.116)

@@ -43,7 +43,7 @@ public class AppointmentRestController {
 	
 	
 	//Scheduling an appointment
-	 @PostMapping(value="/scheduleappointment",consumes = "application/json",produces = "application/json")
+	 @PostMapping(value="/schedule-appointment",consumes = "application/json",produces = "application/json")
 	 @PreAuthorize("hasAuthority('patient')")
 	 public ResponseEntity<?> scheduleAppointment(@Valid @RequestBody AppointmentDTO appointmentDTO) throws PatientNotFoundException, DoctorNotFoundException {
 	        Appointment appointment = service.scheduleAppointment(appointmentDTO);
@@ -54,7 +54,7 @@ public class AppointmentRestController {
 	 
 
 	    // Get all appointments for a patient
-	    @GetMapping("/getappointmentbyid/{appointmentId}") 
+	    @GetMapping("/get-appointment-by-id/{appointmentId}") 
 	    @PreAuthorize("hasAuthority('admin') or hasAuthority('doctor')")
 	    public ResponseEntity<?> findAppointmentByPatientId(@PathVariable Integer appointmentId) throws AppointmentNotFoundException {
 	        if (appointmentId == null) {
@@ -69,13 +69,13 @@ public class AppointmentRestController {
 	   
 
 	    // Cancel an appointment
-	    @PutMapping("/cancelappointment/{appointmentId}")
+	    @PutMapping("/cancel-appointment/{appointmentId}")
 	    @PreAuthorize("hasAuthority('admin')")
 	    public int cancelAppointment(@PathVariable int appointmentId) throws AppointmentNotFoundException {
 	        return service.cancelAppointment(appointmentId);
 	    }
 	    
-	    @PutMapping("/updateappointment/{appointmentId}")
+	    @PutMapping("/update-appointment/{appointmentId}")
 	    @PreAuthorize("hasAuthority('patient')")
 	    public  ResponseEntity<Map<String, String>> updateAppointment(@PathVariable int appointmentId,@RequestBody AppointmentDTO appointmentDTO) throws PatientNotFoundException, DoctorNotFoundException, AppointmentNotFoundException {
 	    	service.updateAppointment(appointmentId,appointmentDTO);
@@ -85,7 +85,7 @@ public class AppointmentRestController {
 		        return ResponseEntity.ok(response);
 	    }
 	    
-	    @GetMapping(value="/getallappointments",produces = "application/json")
+	    @GetMapping(value="/get-all-appointments",produces = "application/json")
 	    @PreAuthorize("hasAuthority('admin')")
 	    public ResponseEntity<List<AppointmentDTO>> viewAppointments() {
 	        List<AppointmentDTO> appointments = service.viewAppointments();

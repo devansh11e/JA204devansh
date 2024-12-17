@@ -38,7 +38,7 @@ public class DoctorRestController {
 	///////////////////DOCTOR MODULE///////////////////////
 	
 	// Adding Doctor
-	@PostMapping(value="/addDoctor",consumes = "application/json",produces = "application/json")
+	@PostMapping(value="/add-Doctor",consumes = "application/json",produces = "application/json")
 	@PreAuthorize("hasAuthority('doctor')")
 	public Doctor registerDoctor(@Valid @RequestBody Doctor doc) {
 
@@ -47,7 +47,7 @@ public class DoctorRestController {
 	}
 	
 	//Updating Doctor by DoctorId
-	@PutMapping("/updateDoctor/{doctorId}")
+	@PutMapping("/update-Doctor/{doctorId}")
 	@PreAuthorize("hasAuthority('doctor')")
 	public ResponseEntity<Map<String, String>>  updateDoctor(@PathVariable int doctorId,@Valid @RequestBody Doctor doc) throws DoctorNotFoundException{
 
@@ -59,17 +59,17 @@ public class DoctorRestController {
 	
 	
 	//Get Doctor By ID
-	@GetMapping("/getDoctorbyid/{did}") 
+	@GetMapping("/get-Doctor-by-id/{did}") 
 	@PreAuthorize("hasAuthority('admin') or hasAuthority('patient') or hasAuthority('doctor')")
 	public Doctor   getDoctorById(@PathVariable int did) throws DoctorNotFoundException  {
-		
+		logger.info("Recieved ID: ",did);
 		return  service.getDoctorById(did);
 		
 	}
 	
 	
 	// Get All Doctor
-	@GetMapping(value="/getallDoctor",produces = "application/json")
+	@GetMapping(value="/get-all-Doctor",produces = "application/json")
 	@PreAuthorize(" hasAuthority('patient') ")
 	public List<Doctor>  viewAllDoctors(){
 		
@@ -80,11 +80,11 @@ public class DoctorRestController {
 	
 	
 	//Get Doctor By Name
-	@GetMapping("/getbyDoctorName/{doctor_name}")
+	@GetMapping("/get-by-DoctorName/{doctor_name}")
 	@PreAuthorize("hasAuthority('admin')")
 	public List<Doctor>  getByDoctorName(@PathVariable String doctor_name) throws DoctorNotFoundException{
 		
-		
+		logger.info("Recieved Name:",doctor_name);
 		return service.getByDoctorName(doctor_name);
 		
 	}

@@ -29,7 +29,7 @@ public class PrescribeMedicationDTO {
     @Size(max = 20, message = "Duration must be within 20 characters")
     private String duration;
 
-    @Size(max = 20, message = "Instruction must be within 20 characters")
+    @Size(max = 100, message = "Instruction must be within 100 characters")
     private String instruction;
 
     @NotNull(message = "Start date is required")

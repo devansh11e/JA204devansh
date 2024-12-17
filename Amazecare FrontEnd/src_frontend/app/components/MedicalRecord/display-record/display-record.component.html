@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display All Medical Records</title>
+  
+  <style>
+    body {
+      background: linear-gradient(to right, #6a1b9a, #2575fc);
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar {
+      background-color: #343a40;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .navbar .nav-link {
+      color: #fff;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+    .navbar .nav-link:hover {
+      color: #1e88e5;
+    }
+    h1 {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+    .btn-success {
+      background-color: #1e88e5;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .btn-success:hover {
+      background-color: #1565c0;
+    }
+    .table {
+      margin-top: 30px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .table th, .table td {
+      text-align: center;
+    }
+    .table-dark th, .table-dark td {
+      color: #fff;
+    }
+    .table-dark {
+      background-color: #343a40;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm bg-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin">Back To Dashboard</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Page Heading -->
+  <h1>Display All Medical Records</h1>
+
+  <!-- View All Button -->
+  <button type="button" class="btn btn-success" (click)="getAllRecord()">View All Medical Records</button><br>
+
+  <!-- Table -->
+  <div class="container col-lg-10">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Appointment ID</th>
+          <th>Diagnosis</th>
+          <th>Prescription</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of recList">
+          <td>{{record.recordId}}</td>
+          <td>{{record.appointmentId}}</td>
+          <td>{{record.diagnosis}}</td>
+          <td>{{record.prescription}}</td>
+          <td>{{record.notes}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

@@ -21,7 +21,7 @@ public class AppointmentDTO {
 	    private String timeSlot;
 	    @NotNull(message = "Status is required")
 	    private String status;
-	    @NotNull(message = "Status is required")
+	    @NotNull(message = "Reason is required")
 	    private String reason;
 		public AppointmentDTO() {
 			super();

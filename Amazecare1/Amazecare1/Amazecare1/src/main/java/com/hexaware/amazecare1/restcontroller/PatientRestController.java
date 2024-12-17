@@ -38,7 +38,7 @@ public class PatientRestController {
     Logger logger =	   LoggerFactory.getLogger(PatientRestController.class);
     
     // Register a new patient
-    @PostMapping("/registerpatient")
+    @PostMapping("/register-patient")
     @PreAuthorize("hasAuthority('patient')")
     public ResponseEntity<Patient> registerPatient(@Valid @RequestBody Patient patient) {
         Patient patient1=service.registerPatient(patient);
@@ -46,7 +46,7 @@ public class PatientRestController {
     }
 
     // Update patient information
-    @PutMapping("/updatepatient/{patientId}")
+    @PutMapping("/update-patient/{patientId}")
     @PreAuthorize("hasAuthority('patient')")
     public ResponseEntity<Map<String, String>> updatePatientInfo(@PathVariable int patientId,@Valid @RequestBody Patient patient) throws PatientNotFoundException{
     	service.updatePatientInfo(patientId, patient);
@@ -60,7 +60,7 @@ public class PatientRestController {
     
     
     //Get Patient By ID
-    @GetMapping("/getPatientbyid/{patientId}")
+    @GetMapping("/get-Patient-by-id/{patientId}")
     @PreAuthorize("hasAuthority('admin') or hasAuthority('patient') or hasAuthority('doctor')")
 	public Patient   getPatientById(@PathVariable int patientId) throws PatientNotFoundException {
 		
@@ -68,7 +68,7 @@ public class PatientRestController {
 		
 	}
     //Get By Patient Name
-    @GetMapping("/getPatientByName/{patientName}")
+    @GetMapping("/get-Patient-By-Name/{patientName}")
     @PreAuthorize("hasAuthority('admin')")
 	public List<Patient>  getPatientByName(@PathVariable String patientName) throws PatientNotFoundException{
 		
@@ -77,7 +77,7 @@ public class PatientRestController {
 		
 	}
     
-    @GetMapping("/getAllPatients")
+    @GetMapping("/get-All-Patients")
     @PreAuthorize("hasAuthority('admin')")
     public List<Patient> viewAllPatients()
     { return service.viewAllPatients();}

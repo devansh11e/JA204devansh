@@ -28,7 +28,7 @@ public class Patient {
     private int patientId;
 
     @Column(nullable = false)
-    @Pattern(regexp = "[A-Z][a-z]+",message = "patientName must begin with Uppercase")
+    @Pattern(regexp = "^[A-Z][a-z]+(\\s[A-Z][a-z]+)*$", message = "patientName must begin with Uppercase and can have a space between first and last name")
     private String patientName;
     @Past
     private LocalDate dob;
